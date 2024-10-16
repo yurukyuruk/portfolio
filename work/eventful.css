@@ -1,0 +1,185 @@
+html {
+    font-family: "Nunito", sans-serif;
+}
+body {
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+    margin: 0;
+}
+li, h1, h2, h3, h4, p {
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px 0 100px;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+}
+.menu {
+    display: flex;
+}
+.menu li {
+    padding-left: 20px;
+}
+.menu li a {
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+}
+.main-image-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px 100px 0 100px;
+}
+.main-image-section img {
+    width: 240px;
+}
+.eventful-logo-and-description {
+    width: 50vw;
+}
+.eventful-logo-and-description img{
+    width: 200px;
+}
+.eventful-logo-and-description h1{
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 60px;
+}
+.prototype-button {
+    font-size: 18px;
+    width: 300px;
+    height: 50px;
+    background-color: white;
+    font-weight: 800;
+    font-family: "Nunito", sans-serif;
+    border-radius: 25px;
+    margin-top: 34px;
+    cursor: pointer;
+    margin-top: 40px;
+    border: 2px solid rgb(255, 87, 51);
+    color: rgb(255, 87, 51);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.prototype-button:hover {
+    background-color: rgb(255, 87, 51);
+    color: white;
+}
+
+.overview-and-work-details {
+    padding: 160px 100px 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.overview-section h2 {
+    font-size: 34px;
+}
+.overview-section p {
+   padding-top: 20px;
+   font-size: 20px;
+   line-height: 1.6;
+}
+.overview-section p span {
+    font-weight: bold;
+ }
+ .work-details {
+    padding-top: 40px;
+ }
+.work-details li {
+    display: flex;
+    font-size: 16px;
+}
+.work-details li p{
+    font-size: 18px;
+    padding: 1px 0 0 4px;
+}
+.work-details li::before {
+    content: "•"; 
+    color: rgb(255, 87, 51);
+    display: inline-block;
+    width: 16px;
+}
+.problem-and-solution {
+    padding: 100px 100px 0 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.problem-part, .solution-part {
+    width: calc(50vw - 150px);
+}
+.problem-part h2, .solution-part h2{
+    font-size: 26px;
+}
+.problem-part p, .solution-part p{
+    font-size: 18px;
+    line-height: 1.6;
+    padding-top: 10px;
+}
+.problem-part p span, .solution-part p span {
+    font-weight: bold;
+}
+
+.carusele-images-container {
+    position: relative;
+    height: 600px;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.carusele-images {
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 1000px;
+    gap: 50px;
+}
+.carusele-prev-image {
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    align-self: center;
+}
+.carusele-next-image {
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    align-self: center;
+}
+.carusele-images.sliding-transition {
+    transition: transform 0.5s ease-in-out;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 100px 0 100px;
+    border-top: 2px solid rgb(240, 240, 240);
+    padding: 20px 0 12px 0;
+    color: rgb(145, 145, 145);
+    font-size: 12px;
+    position: relative;
+}
+.footer-designer-part {
+    position: absolute;
+    left: 0;
+}
+.footer-my-name {
+    padding-left: 3px;
+    color: black;
+}
