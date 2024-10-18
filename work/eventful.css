@@ -126,7 +126,7 @@ header {
     font-size: 26px;
 }
 .problem-part p, .solution-part p{
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     padding-top: 10px;
 }
@@ -138,8 +138,8 @@ header {
     position: relative;
     height: 600px;
     display: flex;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 .carusele-images {
     display: flex;
@@ -148,21 +148,136 @@ header {
     gap: 50px;
 }
 .carusele-prev-image {
-    height: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: rgb(145, 145, 145);
+    font-size: 24px;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
     position: absolute;
     left: 10px;
     align-self: center;
+    background-color: white;
+    border: none;
+    cursor: pointer;
 }
 .carusele-next-image {
-    height: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: rgb(145, 145, 145);
+    font-size: 24px;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
     position: absolute;
     right: 10px;
     align-self: center;
+    background-color: white;
+    border: none;
+    cursor: pointer;
 }
 .carusele-images.sliding-transition {
     transition: transform 0.5s ease-in-out;
 }
 
+.research-section  {
+    padding: 0 100px 0 100px;
+}
+.research-section h2 {
+    font-size: 34px;
+}
+.research-section p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+.research-section h2 + p {
+    padding-top: 40px;
+}
+.diamond-bullet {
+    color: rgb(255, 87, 51);
+    font-size: 22px;
+}
+.research-section p span {
+    font-weight: bold;
+}
+.ideation-section {
+    padding: 100px 100px 0 100px;
+}
+.ideation-section h2 {
+    font-size: 34px;
+    font-weight: bold;
+    list-style:disc;
+}
+.personas {
+    font-size: 22px;
+    padding-top: 40px;
+}
+.personas div {
+    padding-top: 20px;
+}
+.personas div img {
+    width: calc(50vw - 146px);
+}
+.first-persona {
+    padding: 20px 50px 0px 0px;
+}
+.site-map-section h3 {
+    font-size: 22px;
+    padding-top: 100px;
+}
+.site-map-section img {
+    width: 800px;
+    padding-top: 60px;
+}
+.site-map-texts p, .site-map-texts h4{
+    font-size: 20px;
+    line-height: 1.6;
+}
+.site-map-texts ol {
+    padding: 10px 0 20px 10px;
+}
+.site-map-texts ol li {
+    list-style: decimal;
+}
+.site-map-texts ol > li::marker {
+    font-weight: bold;
+  }
+.site-map-first-paragraph {
+    padding-top: 40px;
+}
+.site-map-texts {
+ font-size: 18px;
+}
+.user-flow-section {
+    padding-top: 100px;
+}
+.user-flow-section img{
+    padding-top: 60px;
+    width: 800px;
+}
+.user-flow-section h3 {
+    font-size: 22px;
+}
+.user-flow-text-content {
+    padding-top: 40px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+.user-flow-text-content p span {
+    font-weight: bold;
+}
+.user-flow-text-content-second-paragraph, .user-flow-text-content-third-paragraph {
+    padding-top: 18px;
+}
+.information-architecture-section {
+    padding-top: 100px;
+}
+.information-architecture-section h3 {
+    font-size: 22px;
+}
+.information-architecture-section img {
+    padding-top: 60px;
+    width: calc(100vw - 230px);
+}
 footer {
     display: flex;
     flex-wrap: wrap;
