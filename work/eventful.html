@@ -243,29 +243,38 @@
             </li>
             <li class="usability-testing-section">
               <h3>Usability Testing</h3>
-              <h4>Test Scenarios</h4>
-              <ul class="test-scenarios-list">
-                <li>
-                  <h5>Find your ppcoming and past events:</h5> 
-                  <p>Users are asked to view their upcoming events within the application.</p>
+              <h4 class="test-scenario">Test Scenarios</h4>
+              <ol class="test-scenarios-list">
+                <li style="--cardColor: rgb(102, 163, 192)">
+                    <div class="content">
+                        <h5>Find your upcoming and past events:</h5>
+                        <p>Users are asked to view their upcoming events within the application.</p>
+                    </div>
                 </li>
-                <li>
-                  <h5>Create a new event:</h5>
-                  <p>Users are tasked to view “create a new event” section and check all the details out that is required to create a new event.</p> 
+                <li style="--cardColor: rgb(77, 145, 180)">
+                    <div class="content">
+                        <h5>Create a new event:</h5>
+                        <p>Users are tasked to view “create a new event” section and check all the details out that is required to create a new event.</p>
+                    </div>
                 </li>
-                <li>
-                  <h5>Find your profile information:</h5>
-                  <p>Users need to find and view their profile information to check its accessibility and completeness.</p>
+                <li style="--cardColor: rgb(40, 96, 124)">
+                    <div class="content">
+                        <h5>Find your profile information:</h5>
+                        <p>Users need to find and view their profile information to check its accessibility and completeness.</p>
+                    </div>
                 </li>
-                <li>
-                  <h5>Add yourself to an event (“Good Morning English Speaking Club”):</h5>
-                  <p>Users are asked to add themselves to a specific event to test the ease of joining an event.</p>
+                <li style="--cardColor: rgb(28, 69, 90)">
+                    <div class="content">
+                        <h5>Add yourself to an event (“Good Morning English Speaking Club”):</h5>
+                        <p>Users are asked to add themselves to a specific event to test the ease of joining an event.</p>
+                    </div>
                 </li>
-              </ul>
-              <h4>Identified Usability Issues and User Pain Points</h4>
+            </ol>            
+              <h4 class="user-pain-point">Identified Usability Issues and User Pain Points</h4>
               <ul class="user-pain-points-list">
                 <li>
-                  <h5>Button design consistency:</h5>
+                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                  <h5>Button design consistency</h5>
                   <div>
                     <h6>Issue:</h6>
                     <p>Users found that primary buttons were not distinct enough from other non-button elements due to similar patterns.</p>
@@ -278,7 +287,8 @@
                   </div>
                 </li>
                 <li>
-                  <h5>Event pricing and sharing:</h5>
+                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                  <h5>Event pricing and sharing</h5>
                   <div>
                     <h6>Issue:</h6>
                     <p>The app currently lacks features for adding event prices.</p>
@@ -289,7 +299,8 @@
                   </div>
                 </li>
                 <li>
-                  <h5>Calendar integration:</h5>
+                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                  <h5>Calendar integration</h5>
                   <div>
                     <h6>Issue:</h6>
                     <p>The app does not currently allow users to add events to their Google Calendar.</p>
@@ -300,7 +311,8 @@
                   </div>
                 </li>
                 <li>
-                  <h5>Burger menu necessity:</h5>
+                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                  <h5>Burger menu necessity</h5>
                   <div>
                     <h6>Issue:</h6>
                     <p>The burger menu was considered unnecessary by users.</p>
@@ -311,7 +323,8 @@
                   </div>
                 </li>
                 <li>
-                  <h5>Filter specificity:</h5>
+                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                  <h5>Filter specificity</h5>
                   <div>
                     <h6>Issue:</h6>
                     <p>The current filtering options are not detailed enough.</p>
@@ -322,7 +335,8 @@
                   </div>
                 </li>
                 <li>
-                  <h5>Event host information:</h5>
+                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                  <h5>Event host information</h5>
                   <div>
                     <h6>Issue:</h6>
                     <p>Users would like to see the name of the event host.</p>
@@ -333,7 +347,8 @@
                   </div>
                 </li>
                 <li>
-                  <h5>Event participation information:</h5>
+                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                  <h5>Event participation information</h5>
                   <div>
                     <h6>Issue:</h6>
                     <p>Users are not informed if they have already added themselves to an event.</p>
@@ -344,7 +359,8 @@
                   </div>
                 </li>
                 <li>
-                  <h5>Participant limitations:</h5>
+                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                  <h5>Participant limitations</h5>
                   <div>
                     <h6>Issue:</h6>
                     <p>There is no information on the maximum number of participants for events.</p>
@@ -360,25 +376,38 @@
         </section>
         <section class="iteration-and-finalization-section">
           <h2>Iteration and Finalization</h2>
-          <div>
+          <div class="iteration-part">
             <p>We refined the design based on usability testing results and finalized the prototype. Here are the changes we made:</p>
             <ul>
-              <li>Redesigned primary buttons to be more visually distinct, enhancing user recognition and interaction.</li>
-              <li>Implemented features to add event prices to enhance functionality and user engagement.</li>
-              <li>Provided an option to add reserved events on Google Calendar to allow users to easily add events to their personal schedules.</li>
-              <li>Evaluated the necessity of the burger menu and considered removing it.</li>
-              <li>Added more specific filter options, such as times and places, to help users find events that meet their exact preferences.</li>
-              <li>Displayed the host's name on event details to provide more context and information for users.</li>
-              <li>Included a notification or indicator showing that a user has already joined an event.</li>
-              <li>Showed the maximum number of participants for each event and indicate when an event is full.</li>
+              <li><span>&#x2714;</span> Redesigned primary buttons to be more visually distinct, enhancing user recognition and interaction.</li>
+              <li><span>&#x2714;</span> Implemented features to add event prices to enhance functionality and user engagement.</li>
+              <li><span>&#x2714;</span> Provided an option to add reserved events on Google Calendar to allow users to easily add events to their personal schedules.</li>
+              <li><span>&#x2714;</span> Evaluated the necessity of the burger menu and considered removing it.</li>
+              <li><span>&#x2714;</span> Added more specific filter options, such as times and places, to help users find events that meet their exact preferences.</li>
+              <li><span>&#x2714;</span> Displayed the host's name on event details to provide more context and information for users.</li>
+              <li><span>&#x2714;</span> Included a notification or indicator showing that a user has already joined an event.</li>
+              <li><span>&#x2714;</span> Showed the maximum number of participants for each event and indicate when an event is full.</li>
             </ul>
           </div>
-          <div>
+          <div class="final-prototype-part">
             <h3>Final Prototype</h3>
             <p>The final prototype incorporated all feedback, resulting in a user-friendly, feature-rich application that met user needs and
             preferences.
             </p>
-            <img src="" alt="Final prototype">
+            <div>
+              <ul>
+                <li><img src="../images/final-prototype-1.png" alt="Final prototype"></li>
+                <li><img src="../images/final-prototype-2.png" alt="Final prototype"></li>
+                <li><img src="../images/final-prototype-3.png" alt="Final prototype"></li>
+                <li><img src="../images/final-prototype-4.png" alt="Final prototype"></li>
+                <li><img src="../images/final-prototype-5.png" alt="Final prototype"></li>
+                <li><img src="../images/final-prototype-6.png" alt="Final prototype"></li>
+                <li><img src="../images/final-prototype-7.png" alt="Final prototype"></li>
+                <li><img src="../images/final-prototype-8.png" alt="Final prototype"></li>
+                <li><img src="../images/final-prototype-9.png" alt="Final prototype"></li>
+                <li><img src="../images/final-prototype-10.png" alt="Final prototype"></li>
+              </ul>
+            </div>
           </div>  
         </section>
     </main>
