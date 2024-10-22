@@ -300,7 +300,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: rgb(255, 87, 51);
+    background-color: rgb(241, 241, 241);
     padding: 10px 30px 10px 10px;
     margin-top: 40px;
 }
@@ -353,7 +353,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: rgb(53, 127, 165);
+    background-color: rgb(241, 241, 241);
     padding: 10px 30px 10px 10px;
     margin-top: 40px;
 }
@@ -490,7 +490,7 @@ header {
     grid-area: text;
   }
   .user-pain-point {
-    padding: 100px 100px 0 100px;
+    padding: 150px 100px 0 100px;
     font-size: 20px;
   }
 .user-pain-points-list {
