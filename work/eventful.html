@@ -119,7 +119,7 @@
             <li class="personas">
               <h3>Personas</h3>
               <div>
-                <img src="../images/persona-1.jpg" alt="persona" class="first-persona">
+                <img src="../images/persona-1.png" alt="persona" class="first-persona">
                 <img src="../images/persona-2.jpg" alt="persona">
               </div>
             </li>
@@ -127,38 +127,46 @@
               <h3>Site Map</h3>
               <div class="site-map-content">
                 <div class="site-map-texts">
-                  <p class="site-map-first-paragraph">In the app, the site map is designed to ensure a smooth user experience, focusing on intuitive navigation and essential features. 
+                  <p id="site-map-first-paragraph">In the app, the site map is designed to ensure a smooth user experience, focusing on intuitive navigation and essential features. 
                     The app is structured around four key sections:
                   </p>
                   <ol>
                     <li>
-                      <h4>Home:</h4>
-                      <p>
-                        This is the main hub where users can search for events, filter results by category, and receive personalized, location-based recommendations.
-                      </p>
+                      <div class="content-wrapper">
+                        <h4>Home:</h4>
+                        <p>
+                          This is the main hub where users can search for events, filter results by category, and receive personalized, location-based recommendations.
+                        </p>
+                      </div>
                     </li>
                     <li>
-                      <h4>User Profile:</h4>
-                      <p>
-                        Users can manage their personal information, such as updating their "About Me" section, selecting "Interests" to refine event suggestions, 
-                        and managing participation in "My Groups."
-                      </p>
+                      <div class="content-wrapper">
+                        <h4>User Profile:</h4>
+                        <p>
+                          Users can manage their personal information, such as updating their "About Me" section, selecting "Interests" to refine event suggestions, 
+                          and managing participation in "My Groups."
+                        </p>
+                      </div>  
                     </li>
                     <li>
-                      <h4>My Events:</h4>
-                      <p>
-                        This section organizes the user's events into "Upcoming" and "Past Events," allowing them to easily track and revisit events they’re attending 
-                        or have attended.
-                      </p>
+                      <div class="content-wrapper">
+                        <h4>My Events:</h4>
+                        <p>
+                          This section organizes the user's events into "Upcoming" and "Past Events," allowing them to easily track and revisit events they’re attending 
+                          or have attended.
+                        </p>
+                      </div>                     
                     </li>
                     <li>
-                      <h4>Create New Event:</h4>
-                      <p>
-                        Here, users can quickly create an event by filling in the details, such as name, description, date, time, and location.
-                      </p>
+                      <div class="content-wrapper">
+                        <h4>Create New Event:</h4>
+                        <p>
+                          Here, users can quickly create an event by filling in the details, such as name, description, date, time, and location.
+                        </p>
+                      </div>                     
                     </li>
                   </ol>
-                  <p class="site-map-last-paragraph">
+                  <p id="site-map-last-paragraph">
                     This site map emphasizes simplicity and user-centered design, ensuring that users can easily discover, participate in, and create events, making 
                     it an engaging platform for event management.
                   </p>
@@ -189,13 +197,17 @@
             </li>
             <li class="low-fidelity-wireframe-section">
               <h3>Low Fidelity Wireframes</h3>
-              <ul class="wireframe-images">
-                <li><img src="../images/low-fid-1.png" alt="Low fidelity wireframe"></li>
-                <li><img src="../images/low-fid-2.png" alt="Low fidelity wireframe"></li>
-                <li><img src="../images/low-fid-3.png" alt="Low fidelity wireframe"></li>
-                <li><img src="../images/low-fid-4.png" alt="Low fidelity wireframe"></li>
-                <li><img src="../images/low-fid-5.png" alt="Low fidelity wireframe"></li>
-              </ul>
+              <section class="wireframe-images-container">
+                <div>
+                  <ul class="wireframe-images">
+                    <li><img src="../images/low-fid-1.png" alt="Low fidelity wireframe"></li>
+                    <li><img src="../images/low-fid-2.png" alt="Low fidelity wireframe"></li>
+                    <li><img src="../images/low-fid-3.png" alt="Low fidelity wireframe"></li>
+                    <li><img src="../images/low-fid-4.png" alt="Low fidelity wireframe"></li>
+                    <li><img src="../images/low-fid-5.png" alt="Low fidelity wireframe"></li>
+                  </ul>
+                </div> 
+              </section>
             </li>
           </ul>
         </section>
@@ -239,31 +251,34 @@
               version of prototype included all major features, such as <span>event creation</span>, <span>profile management</span>, and 
               <span>event discovery</span>. Interactive elements were added to simulate real user interactions.
               </p>
-              <button><a href="">See prototype</a></button>
+              <a href=""><button>See prototype</button></a>
             </li>
             <li class="usability-testing-section">
               <h3>Usability Testing</h3>
               <h4 class="test-scenario">Test Scenarios</h4>
+              <p class="test-scenario-description">To evaluate the usability of the interface, we defined a set of test scenarios that focus on key user interactions to ensure the prototype's 
+                functionality aligns with user needs and expectations. The scenarios include:
+              </p>
               <ol class="test-scenarios-list">
-                <li style="--cardColor: rgb(102, 163, 192)">
+                <li>
                     <div class="content">
                         <h5>Find your upcoming and past events:</h5>
                         <p>Users are asked to view their upcoming events within the application.</p>
                     </div>
                 </li>
-                <li style="--cardColor: rgb(77, 145, 180)">
+                <li>
                     <div class="content">
                         <h5>Create a new event:</h5>
                         <p>Users are tasked to view “create a new event” section and check all the details out that is required to create a new event.</p>
                     </div>
                 </li>
-                <li style="--cardColor: rgb(40, 96, 124)">
+                <li>
                     <div class="content">
                         <h5>Find your profile information:</h5>
                         <p>Users need to find and view their profile information to check its accessibility and completeness.</p>
                     </div>
                 </li>
-                <li style="--cardColor: rgb(28, 69, 90)">
+                <li>
                     <div class="content">
                         <h5>Add yourself to an event (“Good Morning English Speaking Club”):</h5>
                         <p>Users are asked to add themselves to a specific event to test the ease of joining an event.</p>
@@ -272,8 +287,7 @@
             </ol>            
               <h4 class="user-pain-point">Identified Usability Issues and User Pain Points</h4>
               <ul class="user-pain-points-list">
-                <li>
-                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                <li class="blue-user-pain-point">
                   <h5>Button design consistency</h5>
                   <div>
                     <h6>Issue:</h6>
@@ -286,8 +300,7 @@
                     </p>
                   </div>
                 </li>
-                <li>
-                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                <li class="yellow-user-pain-point">
                   <h5>Event pricing and sharing</h5>
                   <div>
                     <h6>Issue:</h6>
@@ -298,8 +311,7 @@
                     <p>&quot;You could add prices to events.&quot;</p>
                   </div>
                 </li>
-                <li>
-                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                <li class="orange-user-pain-point">
                   <h5>Calendar integration</h5>
                   <div>
                     <h6>Issue:</h6>
@@ -310,8 +322,7 @@
                     <p>&quot;I would like to have the option to add my events to my Google calendar.&quot;</p>
                   </div>
                 </li>
-                <li>
-                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                <li class="blue-user-pain-point">
                   <h5>Burger menu necessity</h5>
                   <div>
                     <h6>Issue:</h6>
@@ -322,8 +333,7 @@
                     <p>&quot;The burger menu seems not needed.&quot;</p>
                   </div>
                 </li>
-                <li>
-                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                <li class="orange-user-pain-point">
                   <h5>Filter specificity</h5>
                   <div>
                     <h6>Issue:</h6>
@@ -334,8 +344,7 @@
                     <p>&quot;Specific times and places would be useful for filters.&quot;</p>
                   </div>
                 </li>
-                <li>
-                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                <li class="blue-user-pain-point">
                   <h5>Event host information</h5>
                   <div>
                     <h6>Issue:</h6>
@@ -346,8 +355,7 @@
                     <p>&quot;You could add the name of the host to the event.&quot;</p>
                   </div>
                 </li>
-                <li>
-                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                <li class="yellow-user-pain-point">
                   <h5>Event participation information</h5>
                   <div>
                     <h6>Issue:</h6>
@@ -358,8 +366,7 @@
                     <p>&quot;You could add information that you have already added yourself to that event.&quot;</p>
                   </div>
                 </li>
-                <li>
-                  <img src="../images/sticky-band-icon.png" alt="Sticky band icon">
+                <li class="orange-user-pain-point">
                   <h5>Participant limitations</h5>
                   <div>
                     <h6>Issue:</h6>
@@ -379,14 +386,14 @@
           <div class="iteration-part">
             <p>We refined the design based on usability testing results and finalized the prototype. Here are the changes we made:</p>
             <ul>
-              <li><span>&#x2714;</span> Redesigned primary buttons to be more visually distinct, enhancing user recognition and interaction.</li>
-              <li><span>&#x2714;</span> Implemented features to add event prices to enhance functionality and user engagement.</li>
-              <li><span>&#x2714;</span> Provided an option to add reserved events on Google Calendar to allow users to easily add events to their personal schedules.</li>
-              <li><span>&#x2714;</span> Evaluated the necessity of the burger menu and considered removing it.</li>
-              <li><span>&#x2714;</span> Added more specific filter options, such as times and places, to help users find events that meet their exact preferences.</li>
-              <li><span>&#x2714;</span> Displayed the host's name on event details to provide more context and information for users.</li>
-              <li><span>&#x2714;</span> Included a notification or indicator showing that a user has already joined an event.</li>
-              <li><span>&#x2714;</span> Showed the maximum number of participants for each event and indicate when an event is full.</li>
+              <li><span class="diamond-bullet">⟣</span> <span class="things-changed">Redesigned primary buttons</span> to be more visually distinct, enhancing user recognition and interaction.</li>
+              <li><span class="diamond-bullet">⟣</span> <span class="things-changed">Implemented features to add event prices</span> to enhance functionality and user engagement.</li>
+              <li><span class="diamond-bullet">⟣</span> <span class="things-changed">Provided an option to add reserved events on Google Calendar</span> to allow users to easily add events to their personal schedules.</li>
+              <li><span class="diamond-bullet">⟣</span> <span class="things-changed">Evaluated the necessity of the burger menu</span> and considered removing it.</li>
+              <li><span class="diamond-bullet">⟣</span> <span class="things-changed">Added more specific filter options</span>, such as times and places, to help users find events that meet their exact preferences.</li>
+              <li><span class="diamond-bullet">⟣</span> <span class="things-changed">Displayed the host's name on event details</span> to provide more context and information for users.</li>
+              <li><span class="diamond-bullet">⟣</span> <span class="things-changed">Included an indicator</span> showing that a user has already joined an event.</li>
+              <li><span class="diamond-bullet">⟣</span> <span class="things-changed">Showed the maximum number of participants</span> for each event and indicate when an event is full.</li>
             </ul>
           </div>
           <div class="final-prototype-part">
@@ -394,20 +401,22 @@
             <p>The final prototype incorporated all feedback, resulting in a user-friendly, feature-rich application that met user needs and
             preferences.
             </p>
-            <div>
-              <ul>
-                <li><img src="../images/final-prototype-1.png" alt="Final prototype"></li>
-                <li><img src="../images/final-prototype-2.png" alt="Final prototype"></li>
-                <li><img src="../images/final-prototype-3.png" alt="Final prototype"></li>
-                <li><img src="../images/final-prototype-4.png" alt="Final prototype"></li>
-                <li><img src="../images/final-prototype-5.png" alt="Final prototype"></li>
-                <li><img src="../images/final-prototype-6.png" alt="Final prototype"></li>
-                <li><img src="../images/final-prototype-7.png" alt="Final prototype"></li>
-                <li><img src="../images/final-prototype-8.png" alt="Final prototype"></li>
-                <li><img src="../images/final-prototype-9.png" alt="Final prototype"></li>
-                <li><img src="../images/final-prototype-10.png" alt="Final prototype"></li>
-              </ul>
-            </div>
+            <section class="final-prototype-container">
+              <section class="final-prototype-photos">
+                <img src="../images/final-prototype-1.png" alt="Final prototype" class="final-prototype-photo">
+                <img src="../images/final-prototype-2.png" alt="Final prototype" class="final-prototype-photo">
+                <img src="../images/final-prototype-3.png" alt="Final prototype" class="final-prototype-photo">
+                <img src="../images/final-prototype-4.png" alt="Final prototype" class="final-prototype-photo">
+                <img src="../images/final-prototype-5.png" alt="Final prototype" class="final-prototype-photo">
+                <img src="../images/final-prototype-6.png" alt="Final prototype" class="final-prototype-photo">
+                <img src="../images/final-prototype-7.png" alt="Final prototype" class="final-prototype-photo">
+                <img src="../images/final-prototype-8.png" alt="Final prototype" class="final-prototype-photo">
+                <img src="../images/final-prototype-9.png" alt="Final prototype" class="final-prototype-photo">
+                <img src="../images/final-prototype-10.png" alt="Final prototype" class="final-prototype-photo">
+              </section>
+              <button type="button" class="prototype-prev-image">«</button>
+              <button type="button" class="prototype-next-image">»</button>
+            </section>
           </div>  
         </section>
     </main>

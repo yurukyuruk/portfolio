@@ -47,7 +47,7 @@ header {
     padding: 100px 100px 0 100px;
 }
 .main-image-section img {
-    width: 240px;
+    width: 280px;
 }
 .eventful-logo-and-description {
     width: 50vw;
@@ -64,15 +64,15 @@ header {
     font-size: 18px;
     width: 300px;
     height: 50px;
-    background-color: white;
     font-weight: 800;
     font-family: "Nunito", sans-serif;
     border-radius: 25px;
     margin-top: 34px;
     cursor: pointer;
     margin-top: 40px;
-    border: 2px solid rgb(255, 87, 51);
+    background-color: white;
     color: rgb(255, 87, 51);
+    border: 2px solid rgb(255, 87, 51);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .prototype-button:hover {
@@ -134,13 +134,12 @@ header {
 .problem-part p span, .solution-part p span {
     font-weight: bold;
 }
-
 .carusele-images-container {
     position: relative;
     height: 600px;
     display: flex;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 .carusele-images {
     display: flex;
@@ -189,6 +188,7 @@ header {
 .research-section p {
     font-size: 20px;
     line-height: 1.6;
+    padding-top: 20px;
 }
 .research-section h2 + p {
     padding-top: 40px;
@@ -201,26 +201,29 @@ header {
     font-weight: bold;
 }
 .ideation-section h2 {
-    padding: 100px 100px 0 100px;
+    padding: 150px 100px 0 100px;
     font-size: 34px;
     font-weight: bold;
     list-style:disc;
 }
 .personas {
-    font-size: 22px;
     padding: 40px 100px 0 100px;
+}
+.personas h3 {
+    font-size: 22px;
 }
 .personas div {
     padding-top: 20px;
 }
 .personas div img {
     width: calc(50vw - 140px);
+    padding-top: 40px;
 }
 .first-persona {
     padding: 20px 50px 0px 0px;
 }
 .site-map-section {
-    padding: 100px 100px 0 100px;
+    padding: 150px 100px 0 100px;
 }
 .site-map-section h3 {
     font-size: 22px;
@@ -232,32 +235,63 @@ header {
 }
 .site-map-content img {
     width: 800px;
-    padding-top: 60px;
-}
-.site-map-texts p, .site-map-texts h4{
-    font-size: 20px;
-    line-height: 1.6;
+    padding-top: 100px;
 }
 .site-map-texts ol {
-    padding: 10px 0 20px 10px;
+    padding: 20px 0 0 0;
 }
 .site-map-texts ol li {
-    list-style: decimal;
+    counter-increment: li;
+    display: flex;              
+    align-items: flex-start;     
+    margin-bottom: 20px;
+    padding-top: 14px;
 }
-.site-map-texts ol > li::marker {
+.site-map-texts ol {
+    list-style: none; 
+    counter-reset: li
+}
+.site-map-texts ol > li::before {
+    content: counter(li);
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 87, 51);
+    color: white;
     font-weight: bold;
-  }
-.site-map-first-paragraph {
-    padding-top: 40px;
+    padding: 8px 16px 8px 16px;
+    border-radius: 26px;
+    margin-right: 10px; 
 }
-.site-map-texts {
- font-size: 18px;
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.content-wrapper h4 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;         /* Center-align the number and h4 */
+    margin: 0;
+    font-size: 20px;
+    padding: 10px 0 0 8px;
+}
+#site-map-first-paragraph, #site-map-last-paragraph {
+    padding-top: 40px;
+    margin-left: 0;
+    font-size: 20px;
+}
+.site-map-texts p {
+    margin-left: -56px;           
+    font-size: 18px;
+    line-height: 1.6;
+    padding-top: 20px;
 }
 .user-flow-section {
-    padding: 100px 100px 0 100px;
+    padding: 150px 100px 0 100px;
 }
 .user-flow-section img{
-    padding-top: 60px;
+    padding-top: 100px;
     width: 800px;
 }
 .user-flow-section h3 {
@@ -281,6 +315,8 @@ header {
 }
 .information-architecture-section {
     padding-top: 100px;
+    display: flex;
+    align-items: flex-start;
 }
 .information-architecture-section h3 {
     font-size: 22px;
@@ -289,23 +325,25 @@ header {
     padding-top: 60px;
     width: calc(100vw - 230px);
 }
-.low-fidelity-wireframe-section {
-    width: 100vw;
-}
 .low-fidelity-wireframe-section h3 {
-    padding: 100px 100px 0 100px;
+    padding: 150px 100px 0 100px;
     font-size: 22px;
+}
+.wireframe-images-container {
+    margin-top: 54px;
+    padding: 0 100px 40px 100px;
+    background-color: rgb(241, 241, 241);
 }
 .wireframe-images {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    background-color: rgb(241, 241, 241);
-    padding: 10px 30px 10px 10px;
-    margin-top: 40px;
+    flex-wrap: wrap;
 }
+
 .wireframe-images img {
     width: 240px;
+    height: auto;
+    padding-top: 58px;  
 }
 .design-section {
     padding-top: 150px;
@@ -354,11 +392,12 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: rgb(241, 241, 241);
-    padding: 10px 30px 10px 10px;
+    padding: 0 100px 40px 100px;
     margin-top: 40px;
 }
 .ui-design-section ul li img {
     width: 240px;
+    padding-top: 48px;
 }
 .testing-section h2 {
     font-size: 34px;
@@ -382,117 +421,90 @@ header {
 .prototype-content p span {
     font-weight: bold;
 }
-.prototype-content button {
-    font-size: 18px;
-    width: 300px;
-    height: 50px;
-    background-color: white;
-    font-weight: 800;
-    font-family: "Nunito", sans-serif;
-    border-radius: 25px;
-    margin-top: 34px;
-    cursor: pointer;
-    border: 2px solid rgb(255, 136, 111);
-    color: rgb(255, 136, 111);
-    transition: background-color 0.3s ease, color 0.3s ease;
+.prototype-content a {
+    margin-top: 100px;
     align-self: center;
 }
-.prototype-content button a {
-    color: rgb(255, 136, 111);
+.prototype-content a button {
+    font-size: 22px;
+    width: 400px;
+    height: 100px;
+    font-weight: 800;
+    font-family: "Nunito", sans-serif;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    border: 2px solid rgb(53, 127, 165);
+    background-color: white;
+    color: rgb(53, 127, 165);
+    transition:  background-color 0.3s ease, color 0.3s ease;
+    align-self: center;
+}
+.prototype-content a button:hover {
+    background-color: rgb(53, 127, 165);
+    color: white;
 }
 .usability-testing-section h3 {
     font-size: 22px;
-    padding: 60px 100px 0 100px;
+    padding: 150px 100px 0 100px;
+}
+.test-scenario-description {
+    padding: 34px 100px 0 100px;
+    line-height: 1.6;
+    font-size: 20px;
 }
 .test-scenario {
     font-size: 20px;
-    padding: 40px 100px 0 100px;
+    padding: 60px 100px 0 100px;
 }
 .test-scenarios-list {
     list-style: none;
-    counter-reset: cardCount;
+    counter-reset: li;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    --cardsGap: 16px; /* 1rem = 16px */
-    gap: var(--cardsGap);
-    padding: 60px 100px 0 100px;
+    padding: 24px 100px 0 100px;
   }
+
   .test-scenarios-list li {
-    counter-increment: cardCount;
-    display: flex;
-    color: white;
-    --labelOffset: 16px; /* 1rem = 16px */
-    --arrowClipSize: 24px; /* 1.5rem = 24px */
-    margin-top: var(--labelOffset);
+    counter-increment: li;
+    display: flex;              
+    align-items: flex-start;     
+    margin-bottom: 20px;
+    padding-top: 14px;
   } 
-  .test-scenarios-list li::before {
-    content: counter(cardCount, decimal-leading-zero);
-    background: white;
-    color: var(--cardColor);
-    font-size: 40px; /* 2em = 40px */
-    font-weight: 700;
-    transform: translateY(calc(-1 * var(--labelOffset)));
-    margin-right: calc(-1 * var(--labelOffset));
-    z-index: 1;
+  
+  .test-scenarios-list > li::before {
+    content: counter(li);
+    font-size: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-inline: 10px; /* 0.5em = 10px */
-  }
-  .test-scenarios-list li .content {
-    background-color: var(--cardColor);
-    --inlinePadding: 20px; /* 1em = 20px */
-    --boxPadding: 10px; /* 0.5em = 10px */
-    display: grid;
-    padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize))
-      var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
-    grid-template-areas:
-      "icon title"
-      "icon text";
-    gap: 5px 20px; /* 0.25em = 5px, 1em = 20px */
-    clip-path: polygon(
-      0 0,
-      calc(100% - var(--arrowClipSize)) 0,
-      100% 50%,
-      calc(100% - var(--arrowClipSize)) 100%,
-      calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
-      0 calc(100% + var(--cardsGap))
-    );
-    position: relative;
-  }
-  .test-scenarios-list li .content::before {
-    content: "";
-    position: absolute;
-    width: var(--labelOffset);
-    height: var(--labelOffset);
-    background: var(--cardColor);
-    left: 0;
-    bottom: 0;
-    clip-path: polygon(0 0, 100% 0, 0 100%);
-    filter: brightness(0.75);
-  }
-  .test-scenarios-list li .content::after {
-    content: "";
-    position: absolute;
-    height: var(--cardsGap);
-    width: var(--cardsGap);
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
-    left: 0;
-    top: 100%;
-  }
-  .test-scenarios-list li .content h5 {
-    grid-area: title;
+    background-color: rgb(53, 127, 165);
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px 8px 16px;
+    border-radius: 26px;
+    margin-right: 10px; 
+} 
+.content h5 {
     font-size: 20px;
+    display: flex;
+    align-items: center;         /* Center-align the number and h4 */
     margin: 0;
-  }
-  .test-scenarios-list li .content p {
-    grid-area: text;
-  }
-  .user-pain-point {
+    font-size: 20px;
+    padding: 10px 0 0 8px;
+}
+.content p {
+    margin-left: -56px;           
+    font-size: 18px;
+    line-height: 1.6;
+    padding-top: 20px;
+}
+.user-pain-point {
     padding: 150px 100px 0 100px;
     font-size: 20px;
-  }
+}
 .user-pain-points-list {
     padding: 0 100px 0 100px;
     display: flex;
@@ -500,24 +512,25 @@ header {
     flex-wrap: wrap;  
 }
 .user-pain-points-list li {
-    margin-top: 40px;
+    margin-top: 60px;
     width: 340px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     position: relative;
 }
-.user-pain-points-list li img {
-    width: 30px;
-    position: absolute;
-    right: 20px;
-    top: -10px;
-    z-index: 1;
+.blue-user-pain-point {
+    background-color: #357fa529;
+}
+.yellow-user-pain-point {
+    background-color: rgb(245, 245, 220);
+}
+.orange-user-pain-point {
+    background-color: rgba(255, 88, 51, 0.297);
 }
 .user-pain-points-list li h5 {
     font-size: 20px;
     width: calc(100% - 32px);
-    background-color: rgb(53, 127, 165);
     margin: 0;
-    color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 10px 10px -12px;
     padding: 16px 16px 16px 16px;
 }
 .user-pain-points-list li div h6 {
@@ -542,38 +555,66 @@ header {
 .iteration-and-finalization-section div ul {
     padding-top: 20px;
 }
-.iteration-and-finalization-section div ul li {
-    padding-top: 20px;
-}
-.iteration-and-finalization-section div ul li span {
-    color: rgb(53, 127, 165);
+.iteration-list-symbol {
+    color: rgb(255, 87, 51);
     font-size: 24px;
-    padding: 0 8px 0 8px;
-    border-radius: 8px;
-    border: solid 2px rgb(53, 127, 165);
+}
+.things-changed {
+    font-weight: bold;
 }
 .final-prototype-part h3 {
     font-size: 22px;
     padding: 150px 100px 0 100px;
 }
 .final-prototype-part p {
-    padding-top: 40px;
     font-size: 20px;
-    padding: 40px 100px 0 100px;
+    padding: 40px 100px 54px 100px;
 }
-.final-prototype-part div {
-    width: 100vw;
-    background-color: rgb(241, 241, 241);
-}
-.final-prototype-part div ul {
-    margin-top: 40px;
+.final-prototype-container {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+    background-color: rgb(241, 241, 241);
+    padding: 40px 10px 40px 10px;
 }
-.final-prototype-part ul li img {
-    width: 340px;
+.final-prototype-photos {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 50px;
+}
+.final-prototype-photo {
+    object-fit: contain;
+    width: 240px;
+}
+.prototype-prev-image  {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: rgb(145, 145, 145);
+    font-size: 24px;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    position: absolute;
+    left: 10px;
+    align-self: center;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.prototype-next-image{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: rgb(145, 145, 145);
+    font-size: 24px;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    position: absolute;
+    right: 10px;
+    align-self: center;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.carusele-images.sliding-transition {
+    transition: transform 0.5s ease-in-out;
 }
 footer {
     display: flex;
