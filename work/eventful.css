@@ -48,6 +48,7 @@ header {
 }
 .main-image-section img {
     width: 280px;
+    margin-right: -10px;
 }
 .eventful-logo-and-description {
     width: 50vw;
@@ -98,7 +99,7 @@ header {
     font-weight: bold;
  }
  .work-details {
-    padding-top: 40px;
+    padding-top: 100px;
  }
 .work-details li {
     display: flex;
