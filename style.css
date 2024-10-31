@@ -172,3 +172,158 @@ footer {
     padding-left: 3px;
     color: black;
 }
+
+/*
+
+.header {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+    width: 100vw;
+    background-color: white;
+    z-index: 2;
+}
+.header-hidden {
+    top: -74px; 
+}
+.scroll-hidden {
+    display: none;
+}
+.header-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100vw - 20px);
+}
+a {
+    cursor: pointer;
+}
+label {
+    position: relative;
+}
+input[type="checkbox"] {
+    position: absolute;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    top: -16px;
+    left: -34px;
+    cursor: pointer;
+    opacity: 0;
+}
+.bar {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;  
+    top: 150px;
+    right: 150px;  
+}
+.bar .middle {
+    height: 3px;
+    width: 30px;
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    transition: 0.3s ease;
+    background-color: black;
+}
+.bar .top {
+    bottom: 7px;
+    height: 3px;
+    width: 30px;
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    transition: 0.3s ease;
+    background-color: black;
+}
+.bar .bottom {
+    top: 10px;
+    height: 3px;
+    width: 30px;
+    border-radius: 50px;
+    position: absolute;
+    right: 0;
+    transition: 0.3s ease;
+    background-color: black;
+}
+input[type="checkbox"]:checked ~ .bar .top {
+    transform: rotate(-45deg);
+    width: 35px;
+    transform-origin: middle;
+    top: 12px
+}
+input[type="checkbox"]:checked ~ .bar .bottom {
+    transform: rotate(45deg);
+    width: 35px;
+    transform-origin: middle;
+    top: -2px
+}
+input[type="checkbox"]:checked ~ .bar .middle {
+    transform: translateX(20px);
+    opacity: 0;
+}
+nav {
+    position: fixed;
+    top: 48px;
+    transition: top 0.1s;
+    z-index: 1;
+    height: calc(100% - 48px); 
+    width: 100%;
+}
+.hidden {
+    display: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+li:hover, li:active {
+    background-color: red;
+}
+nav ul li a {
+    width: calc(100vw - 20px);
+}
+.active {
+    color: black;
+    font-weight: bold;
+}
+*/
+
+@media (max-width: 850px) {
+    .work {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 0;
+    }
+    .work section {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .work section a {
+        align-self: center;
+    }
+    .job-description {
+        padding-bottom: 50px;
+    }
+    footer {
+        margin-top: 0;
+    }
+}

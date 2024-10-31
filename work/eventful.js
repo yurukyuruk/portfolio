@@ -102,3 +102,6 @@ nextImageButton.addEventListener("click", () => {
     nextImageButton.disabled = false;
   }, ANIMATION_TIME);
 });
+
+
+   
