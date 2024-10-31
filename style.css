@@ -55,6 +55,7 @@ header {
     font-size: 28px;
     font-weight: 400;
     display: flex;
+    justify-content: center;
     padding-left: 20px;
     padding-right: 20px;
 }
