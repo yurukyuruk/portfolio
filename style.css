@@ -339,6 +339,10 @@ nav ul li a {
     footer {
         margin-top: 0;
     }
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
 }
 
 @media (max-width: 720px) {
@@ -375,5 +379,9 @@ nav ul li a {
     }
     .copy-right {
         padding-top: 10px;
+    }
+    body {
+        overflow-x: hidden;
+        width: 100%;
     }
 }

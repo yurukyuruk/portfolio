@@ -718,12 +718,18 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+    body {
+        overflow-x: hidden;
+    }
 }
 @media (max-width: 720px) {
  .ui-design-section ul, .wireframe-images {
     flex-direction: column;
     align-items: center;
  }
+ body {
+    overflow-x: hidden;
+}
 }
 @media (max-width: 600px) {
     .main-image-section, .overview-and-work-details, .problem-and-solution, 
@@ -756,14 +762,26 @@ footer {
     .wireframe-images img, .ui-design-section ul li img {
         width: 280px;
     }
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
 }
 @media (max-width: 480px) {
     .prototype-content a button, .prototype-button {
         width: 280px;
     }
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
 }
 @media (max-width: 400px) {
     .user-pain-points-list li {
         width: 280px;
+    }
+    body {
+        overflow-x: hidden;
+        width: 100%;
     }
 }
