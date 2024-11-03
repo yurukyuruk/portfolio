@@ -633,7 +633,7 @@ header {
     border: none;
     cursor: pointer;
 }
-.carusele-images.sliding-transition {
+.final-prototype-photos.sliding-transition {
     transition: transform 0.5s ease-in-out;
 }
 footer {

@@ -54,16 +54,15 @@ nextImgBtn.addEventListener("click", () => {
 
 
 
-
 const finalPrototypeImagesContainer = document.querySelector('.final-prototype-photos');
-const finalPrototypeImages = Array.from(document.querySelectorAll('.final-prototype-photo'))
+const finalPrototypeImages = Array.from(document.querySelectorAll('.final-prototype-photo'));
 const prevImageButton = document.querySelector('.prototype-prev-image');
 const nextImageButton = document.querySelector('.prototype-next-image');
 
-// Gap between elemnts need to be defined in PX
+// Gap between elements needs to be defined in PX
 const gapSizeBetweenImagesPixel = getComputedStyle(finalPrototypeImagesContainer).getPropertyValue('gap');
 const gapSizeBetweenImagesNumber = Number(gapSizeBetweenImagesPixel.slice(0, gapSizeBetweenImagesPixel.length - 2));
-const imageCount = finalPrototypeImagesContainer.length;
+const imageCount = finalPrototypeImages.length;
 const singleImageWidth = finalPrototypeImages[0].width;
 let currentImgIndex = 0;
 let prevImageIndex = 0;
@@ -71,12 +70,11 @@ let prevImageIndex = 0;
 prevImageButton.addEventListener("click", () => {
   prevImageButton.disabled = true;
   prevImageIndex = currentImgIndex;
-  currentImgIndex = (currentImgIndex - 1 + imagesCount) % imagesCount;
-  finalPrototypeImagesContainer.style.transform = `translateX(-${singleImgWidth}px)`;
+  currentImgIndex = (currentImgIndex - 1 + imageCount) % imageCount;
+  finalPrototypeImagesContainer.style.transform = `translateX(-${singleImageWidth}px)`;
   finalPrototypeImagesContainer.insertBefore(finalPrototypeImages[currentImgIndex], finalPrototypeImagesContainer.firstChild);
 
-  // This setTimeout is required as we need to wait once elemnt will be mounted in DOM
-  // To do not experience flashing images
+  // Wait for the element to mount in the DOM to avoid flashing images
   setTimeout(() => {
     finalPrototypeImagesContainer.style.transform = "";
     finalPrototypeImagesContainer.classList.add("sliding-transition");
@@ -92,8 +90,8 @@ nextImageButton.addEventListener("click", () => {
   nextImageButton.disabled = true;
   finalPrototypeImagesContainer.classList.add("sliding-transition");
   prevImageIndex = currentImgIndex;
-  currentImgIndex = (currentImgIndex + 1) % imagesCount;
-  finalPrototypeImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`;
+  currentImgIndex = (currentImgIndex + 1) % imageCount;
+  finalPrototypeImagesContainer.style.transform = `translateX(-${singleImageWidth + gapSizeBetweenImagesNumber}px)`;
 
   setTimeout(() => {
     finalPrototypeImagesContainer.appendChild(finalPrototypeImages[prevImageIndex]);
@@ -102,6 +100,7 @@ nextImageButton.addEventListener("click", () => {
     nextImageButton.disabled = false;
   }, ANIMATION_TIME);
 });
+
 
 
    
