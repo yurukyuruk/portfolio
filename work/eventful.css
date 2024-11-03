@@ -1,9 +1,10 @@
 html {
     font-family: "Nunito", sans-serif;
     max-width: 100%;
+    overflow-x: hidden;
 }
 body {
-    overflow-x: hidden;
+    
     margin: 0;
 }
 a {
