@@ -4,6 +4,7 @@ html {
 body {
     overflow-x: hidden;
     margin: 0;
+    max-width: 100%;
 }
 a {
     text-decoration: none;
@@ -19,16 +20,6 @@ li {
 li, h1, h2, h3, h4, p {
     margin: 0;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
