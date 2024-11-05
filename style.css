@@ -324,15 +324,18 @@ nav ul li a {
     .work {
         flex-direction: column;
         align-items: center;
-        padding-right: 20px;
-        padding-left: 20px;
         padding-top: 0;
+    }
+    .image-wrapper, .image-wrapper img {
+        width: calc(100vw - 200px);
+        height: auto;
     }
     .work section {
         margin-top: 40px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding-left: 0;
     }
     .work section a {
         align-self: center;
@@ -365,6 +368,10 @@ nav ul li a {
         height: auto;
     }
     .job-description {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .work {
         padding-left: 20px;
         padding-right: 20px;
     }
