@@ -711,6 +711,7 @@ footer {
     }
     body {
         overflow-x: hidden;
+        width: 100%;
     }
 }
 @media (max-width: 720px) {
@@ -720,6 +721,7 @@ footer {
  }
  body {
     overflow-x: hidden;
+    width: 100%;
 }
 }
 @media (max-width: 600px) {
