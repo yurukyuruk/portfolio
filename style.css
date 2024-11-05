@@ -1,7 +1,9 @@
+
 html {
     font-family: "Nunito", sans-serif;
-    max-width: 100%;
-    overflow-x: hidden;
+}
+body {
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -353,11 +355,10 @@ nav ul li a {
         padding-right: 20px;
     }
     .image-wrapper {
-        padding-left: 20px;
-        padding-right: 20px;
         display: flex;
         justify-content: center;
         height: auto;
+        width: calc(100vw - 40px);
     }
     .image-wrapper img {
         width: calc(100vw - 40px);

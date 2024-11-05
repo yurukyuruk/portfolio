@@ -2,6 +2,9 @@ html {
     font-family: "Nunito", sans-serif;
     overflow-x: hidden;
 }
+body {
+    margin: 0;
+}
 a {
     text-decoration: none;
 }
