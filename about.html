@@ -21,12 +21,36 @@
   </head>
   <body>
     <header>
-        <a href="./index.html" class="logo"><img src="./images/logo.png" alt="logo"></a>
-        <ul class="menu">
-            <li><a href="./index.html">Work</a></li>
-            <li><a href="./about.html" class="active">About</a></li>
-            <li><a href="https://drive.google.com/file/d/1wxrb4ENX4gwiBwlX_9HqAU4qIHYSqxij/view?usp=sharing" target="_blank">Resume</a></li>
-        </ul>
+      <section class="mobile-header">
+          <div class="header-content">
+              <a href="./index.html" class="logo"><img src="./images/logo.png" alt="logo"></a>
+              <label>
+                  <input type="checkbox" name="" class="hamburger-checkbox">
+                  <div class="bar hamburger-icon">
+                      <span class="top"></span>
+                      <span class="middle"></span>
+                      <span class="bottom"></span>
+                  </div>
+              </label>
+          </div>
+          <nav>
+              <ul  class="mobile-menu-list">
+                  <li class="mobile-menu-list-item"><a href="./index.html">Work</a></li>
+                  <li class="mobile-menu-list-item"><a href="./about.html" id="active">About</a></li>
+                  <li class="mobile-menu-list-item"><a href="https://drive.google.com/file/d/1wxrb4ENX4gwiBwlX_9HqAU4qIHYSqxij/view?usp=sharing" target="_blank">Resume</a></li>
+              </ul>
+          </nav>
+      </section>
+      <section class="desktop-header">
+          <a href="./index.html" class="logo"><img src="./images/logo.png" alt="logo"></a>
+          <nav>
+              <ul class="desktop-menu">
+                  <li><a href="./index.html">Work</a></li>
+                  <li><a href="./about.html" id="active">About</a></li>
+                  <li><a href="https://drive.google.com/file/d/1wxrb4ENX4gwiBwlX_9HqAU4qIHYSqxij/view?usp=sharing" target="_blank">Resume</a></li>
+              </ul>
+          </nav>
+      </section>
     </header>
     <main>
         <section class="image-section">
@@ -61,8 +85,7 @@
         <p>COPYRIGHT © 2024</p>
     </footer>
     <script
-      type="module"
-      src=""
+      src="./about.js"
     ></script>
   </body>
 </html>
