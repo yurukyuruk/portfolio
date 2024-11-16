@@ -84,7 +84,7 @@ footer {
     margin: 50px 100px 0 100px;
     border-top: 2px solid rgb(240, 240, 240);
     padding: 20px 0 12px 0;
-    color: rgb(145, 145, 145);
+    color: rgb(110, 110, 110);
     font-size: 12px;
     position: relative;
     margin-top: auto;
@@ -279,6 +279,7 @@ footer {
 
 @media (max-width: 420px) {
     .image-section img {
+        content: url(./images/asli-yuruk-mobile.webp);
         width: 240px;
     }
 }
