@@ -16,7 +16,11 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </noscript>
+
     <title>Asli Yuruk Portfolio</title>
   </head>
   <body>
@@ -25,7 +29,7 @@
             <div class="header-content">
                 <a href="./index.html" class="logo"><img src="./images/logo.png" alt="logo"></a>
                 <label>
-                    <input type="checkbox" name="" class="hamburger-checkbox">
+                    <input type="checkbox" name="" class="hamburger-checkbox" aria-label="Toggle navigation menu">
                     <div class="bar hamburger-icon">
                         <span class="top"></span>
                         <span class="middle"></span>
@@ -67,7 +71,7 @@
         </section>
         <ul class="works">
             <li class="work">
-                <a href="./work/eventful.html" class="image-wrapper"><img src="./images/eventful-big.jpg" alt="Evenful app design image"></a>
+                <a href="./work/eventful.html" class="image-wrapper"><img src="./images/eventful-big.webp" alt="Evenful app design image" class="eventful-image" loading="lazy"></a>
                 <section>
                     <h2><a href="./work/eventful.html" class="work-name work-color-1">EVENTFUL</a></h2>
                     <p class="work-description">An event app that connects individuals with shared interests, 
@@ -87,7 +91,7 @@
                 </section>
             </li>
             <li class="work">
-                <a href="https://ms-klima-lodz.pl/" class="image-wrapper" target="_blank"><img src="./images/msinstalbud-big.jpg" alt="MS Instalbud webpage design image"></a>
+                <a href="https://ms-klima-lodz.pl/" class="image-wrapper" target="_blank"><img src="./images/msinstalbud-big.webp" alt="MS Instalbud webpage design image" class="msinstalbud-image" loading="lazy"></a>
                 <section>
                     <h2><a href="https://ms-klima-lodz.pl/" class="work-name work-color-2" target="_blank">MS INSTALBUD</a></h2>
                     <p class="work-description">A custom website for an air conditioning client, featuring product information and services 
@@ -107,7 +111,7 @@
                 </section>
             </li>
             <li class="work">
-                <a href="https://southernrightacupuncture.com/index.html" class="image-wrapper" target="_blank"><img src="./images/southernrightacupuncture-big.jpg" alt="Southern Right Acupuncture webpage design image"></a>
+                <a href="https://southernrightacupuncture.com/index.html" class="image-wrapper" target="_blank"><img src="./images/southernrightacupuncture-big.webp" alt="Southern Right Acupuncture webpage design image" class="southernrightacupuncture-image" loading="lazy"></a>
                 <section>
                     <h2><a href="https://southernrightacupuncture.com/index.html" class="work-name work-color-3" target="_blank">SOUTHERN RIGHT ACUPUNCTURE</a></h2>
                     <p class="work-description">A custom website for a client offering Tai Chi and Qi Gong classes, as well as acupuncture

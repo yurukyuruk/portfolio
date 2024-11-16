@@ -77,7 +77,7 @@ li, h1, h2, h3, h4, p {
     padding-right: 28px;
 }
 .job-description {
-    color: rgb(145, 145, 145);
+    color: rgb(120, 120, 120);
     padding: 50px 100px 0 100px;
     font-size: 18px;
     text-align: center;
@@ -138,39 +138,39 @@ button {
     cursor: pointer;
 }
 .work-color-1 {
-    color: rgb(255, 136, 111);
+    color: rgb(255, 87, 51);
 }
 .work-color-2 {
-    color: rgb(53, 127, 165);
+    color: rgb(0, 107, 163);
 }
 .work-color-3 {
-    color: rgb(145, 145, 145);
+    color: rgb(110, 110, 110);
 }
 .event-button {
-    border: 2px solid rgb(255, 136, 111);
-    color: rgb(255, 136, 111);
+    border: 2px solid rgb(255, 87, 51);
+    color: rgb(255, 87, 51);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .event-button:hover {
-    background-color: rgb(255, 136, 111);
+    background-color: rgb(255, 87, 51);
     color: white;
 }
 .msinstalbud-button {
-    border: 2px solid rgb(53, 127, 165);
-    color: rgb(53, 127, 165);
+    border: 2px solid rgb(0, 107, 163);
+    color: rgb(0, 107, 163);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .msinstalbud-button:hover {
-    background-color: rgb(53, 127, 165);
+    background-color: rgb(0, 107, 163);
     color: white;
 }
 .southernrightacupuncture-button {
-    border: 2px solid rgb(145, 145, 145);
-    color: rgb(145, 145, 145);
+    border: 2px solid rgb(110, 110, 110);
+    color: rgb(110, 110, 110);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .southernrightacupuncture-button:hover {
-    background-color: rgb(145, 145, 145);
+    background-color: rgb(110, 110, 110);
     color: white;
 }
 footer {
@@ -181,7 +181,7 @@ footer {
     margin: 50px 100px 0 100px;
     border-top: 2px solid rgb(240, 240, 240);
     padding: 20px 0 12px 0;
-    color: rgb(145, 145, 145);
+    color: rgb(110, 110, 110);
     font-size: 12px;
     position: relative;
 }
@@ -386,7 +386,15 @@ footer {
     .work section {
         padding-left: 0;
     }
-
+    .eventful-image  {
+        content: url(./images/eventful-small.webp);
+    }
+    .msinstalbud-image {
+        content: url(./images/msinstalbud-small.webp);
+    }
+    .southernrightacupuncture-image {
+        content: url(./images/southernrightacupuncture-small.webp);
+    }
     footer {
         flex-direction: column;
         padding-top: 10px;
