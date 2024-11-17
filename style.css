@@ -19,14 +19,26 @@ li {
 li, h1, h2, h3, h4, p {
     margin: 0;
 }
+header {
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    border-bottom: 2px solid rgb(242, 242, 242);
+}
 .desktop-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px 0 100px;
+    padding: 20px 100px 20px 100px;
 }
 .mobile-header {
     display: none;
+}
+.header-hidden {
+    top: -92px; 
 }
 .logo, .logo img{
     width: 50px;
@@ -55,7 +67,7 @@ li, h1, h2, h3, h4, p {
 .name {
     font-size: 64px;
     font-weight: 400;
-    padding: 100px 0 0 0;
+    padding: 186px 0 0 0;
 }
 .job-title {
     color: rgb(145, 145, 145);

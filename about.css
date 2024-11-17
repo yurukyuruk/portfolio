@@ -22,14 +22,26 @@ li {
 li, h1, h2, h3, h4, p {
     margin: 0;
 }
+header {
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+    border-bottom: 2px solid rgb(242, 242, 242);
+}
 .desktop-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px 0 100px;
+    padding: 20px 100px 20px 100px;
 }
 .mobile-header {
     display: none;
+}
+.header-hidden {
+    top: -92px; 
 }
 .logo, .logo img{
     width: 50px;
@@ -53,7 +65,7 @@ li, h1, h2, h3, h4, p {
 main {
     display: flex;
     align-items: center;
-    padding: 100px 100px 40px 100px;
+    padding: 190px 100px 40px 100px;
 }
 .image-section {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -259,7 +271,7 @@ footer {
         color: black;
     }
     main {
-        padding: 100px 20px 40px 20px;
+        padding: 190px 20px 40px 20px;
     }
     .image-section {
         width: calc(100vw - 80px);
