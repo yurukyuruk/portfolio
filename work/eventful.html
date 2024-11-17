@@ -20,7 +20,10 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </noscript>
     <title>Asli Yuruk Portfolio</title>
     <link rel="icon" type="image/x-icon" href="../images/logo.ico">
   </head>
@@ -28,9 +31,9 @@
     <header>
       <section class="mobile-header">
         <div class="header-content">
-            <a href="../index.html" class="logo"><img src="../images/logo.png" alt="logo"></a>
+            <a href="../index.html" class="logo"><img src="../images/logo.webp" alt="logo"></a>
             <label>
-                <input type="checkbox" name="" class="hamburger-checkbox">
+                <input type="checkbox" name="" class="hamburger-checkbox" aria-label="Toggle navigation menu">
                 <div class="bar hamburger-icon">
                     <span class="top"></span>
                     <span class="middle"></span>
@@ -47,7 +50,7 @@
         </nav>
     </section>
     <section class="desktop-header">
-        <a href="../index.html" class="logo"><img src="../images/logo.png" alt="logo"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo.webp" alt="logo"></a>
         <nav>
             <ul class="desktop-menu">
                 <li><a href="../index.html">Work</a></li>
@@ -60,7 +63,7 @@
     <main>
         <section class="main-image-section">
             <div class="eventful-logo-and-description">
-                <img src="../images/eventful-logo.png" alt="Eventful app logo">
+                <img src="../images/eventful-logo.webp" alt="Eventful app logo">
                 <h1>Connecting individuals with shared interests, 
                     enabling them to discover, create, and manage events based on personal preferences.
                 </h1>
@@ -69,16 +72,16 @@
                 </a>
                 <ul class="work-details">
                   <li>
-                    <h3>Role:</h3>
+                    <h2>Role:</h2>
                     <p>UX/UI designer</p>
                   </li>
                   <li>
-                    <h3>Tools:</h3>
+                    <h2>Tools:</h2>
                     <p>Miro, Figma, Kanban board</p>
                   </li>
                 </ul>
             </div>
-            <img class="eventful-main-image" src="../images/eventful-main-image.png" alt="Eventful app image">
+            <img class="eventful-main-image" src="../images/eventful-main-image.webp" alt="Eventful app image">
         </section>
         <section class="overview-and-work-details">
           <section class="overview-section">
@@ -120,16 +123,16 @@
         </section>
         <section class="carusele-images-container">
           <section class="carusele-images">
-            <img class="carusele-image" src="../images/hi-fi-1.png" alt="eventful hi-fi image-1">
-            <img class="carusele-image" src="../images/hi-fi-2.png" alt="eventful hi-fi image-2">
-            <img class="carusele-image" src="../images/hi-fi-3.png" alt="eventful hi-fi image-3">
-            <img class="carusele-image" src="../images/hi-fi-4.png" alt="eventful hi-fi image-4">
-            <img class="carusele-image" src="../images/hi-fi-5.png" alt="eventful hi-fi image-5">
-            <img class="carusele-image" src="../images/hi-fi-6.png" alt="eventful hi-fi image-6">
-            <img class="carusele-image" src="../images/hi-fi-7.png" alt="eventful hi-fi image-7">
-            <img class="carusele-image" src="../images/hi-fi-8.png" alt="eventful hi-fi image-8">
-            <img class="carusele-image" src="../images/hi-fi-9.png" alt="eventful hi-fi image-9">
-            <img class="carusele-image" src="../images/hi-fi-10.png" alt="eventful hi-fi image-10">
+            <img class="carusele-image" src="../images/hi-fi-1.webp" alt="eventful hi-fi image-1" loading="lazy">
+            <img class="carusele-image" src="../images/hi-fi-2.webp" alt="eventful hi-fi image-2" loading="lazy">
+            <img class="carusele-image" src="../images/hi-fi-3.webp" alt="eventful hi-fi image-3" loading="lazy">
+            <img class="carusele-image" src="../images/hi-fi-4.webp" alt="eventful hi-fi image-4" loading="lazy">
+            <img class="carusele-image" src="../images/hi-fi-5.webp" alt="eventful hi-fi image-5" loading="lazy">
+            <img class="carusele-image" src="../images/hi-fi-6.webp" alt="eventful hi-fi image-6" loading="lazy">
+            <img class="carusele-image" src="../images/hi-fi-7.webp" alt="eventful hi-fi image-7" loading="lazy">
+            <img class="carusele-image" src="../images/hi-fi-8.webp" alt="eventful hi-fi image-8" loading="lazy">
+            <img class="carusele-image" src="../images/hi-fi-9.webp" alt="eventful hi-fi image-9" loading="lazy">
+            <img class="carusele-image" src="../images/hi-fi-10.webp" alt="eventful hi-fi image-10" loading="lazy">
           </section>
           <button type="button" class="carusele-prev-image">«</button>
           <button type="button" class="carusele-next-image">»</button>
@@ -150,8 +153,8 @@
             <li class="personas">
               <h3>Personas</h3>
               <div>
-                <img src="../images/persona-1.png" alt="persona" class="first-persona">
-                <img src="../images/persona-2.jpg" alt="persona">
+                <img src="../images/persona-1.webp" alt="persona" class="first-persona" loading="lazy">
+                <img src="../images/persona-2.webp" alt="persona" loading="lazy">
               </div>
             </li>
             <li class="site-map-section">
@@ -202,7 +205,7 @@
                     it an engaging platform for event management.
                   </p>
                 </div>
-                <img src="../images/site-map.png" alt="site map">
+                <img src="../images/site-map.webp" alt="site map" loading="lazy">
               </div>
             </li>
             <li class="user-flow-section">
@@ -223,7 +226,7 @@
                     This streamlined flow ensures users can effortlessly discover, attend, and create events, making event management an engaging experience.
                   </p>
                 </div>
-                <img src="../images/user-flow.png" alt="user flow">
+                <img src="../images/user-flow.webp" alt="user flow" loading="lazy">
               </div>
             </li>
             <li class="low-fidelity-wireframe-section">
@@ -231,11 +234,11 @@
               <section class="wireframe-images-container">
                 <div>
                   <ul class="wireframe-images">
-                    <li><img src="../images/low-fid-1.png" alt="Low fidelity wireframe"></li>
-                    <li><img src="../images/low-fid-2.png" alt="Low fidelity wireframe"></li>
-                    <li><img src="../images/low-fid-3.png" alt="Low fidelity wireframe"></li>
-                    <li><img src="../images/low-fid-4.png" alt="Low fidelity wireframe"></li>
-                    <li><img src="../images/low-fid-5.png" alt="Low fidelity wireframe"></li>
+                    <li><img src="../images/low-fid-1.webp" alt="Low fidelity wireframe"></li loading="lazy">
+                    <li><img src="../images/low-fid-2.webp" alt="Low fidelity wireframe"></li loading="lazy">
+                    <li><img src="../images/low-fid-3.webp" alt="Low fidelity wireframe"></li loading="lazy">
+                    <li><img src="../images/low-fid-4.webp" alt="Low fidelity wireframe"></li loading="lazy">
+                    <li><img src="../images/low-fid-5.webp" alt="Low fidelity wireframe"></li loading="lazy">
                   </ul>
                 </div> 
               </section>
@@ -255,7 +258,7 @@
                   primary buttons and minimalistic, monochrome icons for navigation. This cohesive design ensures clarity, easy navigation, and a consistent 
                   user experience.
                 </p>
-                <img src="../images/style-guide.png" alt="Style guide image"></img>
+                <img src="../images/style-guide.webp" alt="Style guide image"></img>
               </div>
             </li>
             <li class="ui-design-section">
@@ -264,11 +267,11 @@
                 <span>event discovery</span>. Interactive elements were added to simulate real user interactions.
               </p>
               <ul>
-                <li><img src="../images/prototype-first-version-1.jpg" alt="Image of the first version of UI design"></li>
-                <li><img src="../images/prototype-first-version-2.jpg" alt="Image of the first version of UI design"></li>
-                <li><img src="../images/prototype-first-version-3.jpg" alt="Image of the first version of UI design"></li>
-                <li><img src="../images/prototype-first-version-4.jpg" alt="Image of the first version of UI design"></li>
-                <li><img src="../images/prototype-first-version-5.jpg" alt="Image of the first version of UI design"></li>
+                <li><img src="../images/prototype-first-version-1.webp" alt="Image of the first version of UI design" loading="lazy"></li>
+                <li><img src="../images/prototype-first-version-2.webp" alt="Image of the first version of UI design" loading="lazy"></li>
+                <li><img src="../images/prototype-first-version-3.webp" alt="Image of the first version of UI design" loading="lazy"></li>
+                <li><img src="../images/prototype-first-version-4.webp" alt="Image of the first version of UI design" loading="lazy"></li>
+                <li><img src="../images/prototype-first-version-5.webp" alt="Image of the first version of UI design" loading="lazy"></li>
               </ul>
             </li>
           </ul>
@@ -436,16 +439,16 @@
             </p>
             <section class="final-prototype-container">
               <section class="final-prototype-photos">
-                <img src="../images/final-prototype-1.png" alt="Final prototype" class="final-prototype-photo">
-                <img src="../images/final-prototype-2.png" alt="Final prototype" class="final-prototype-photo">
-                <img src="../images/final-prototype-3.png" alt="Final prototype" class="final-prototype-photo">
-                <img src="../images/final-prototype-4.png" alt="Final prototype" class="final-prototype-photo">
-                <img src="../images/final-prototype-5.png" alt="Final prototype" class="final-prototype-photo">
-                <img src="../images/final-prototype-6.png" alt="Final prototype" class="final-prototype-photo">
-                <img src="../images/final-prototype-7.png" alt="Final prototype" class="final-prototype-photo">
-                <img src="../images/final-prototype-8.png" alt="Final prototype" class="final-prototype-photo">
-                <img src="../images/final-prototype-9.png" alt="Final prototype" class="final-prototype-photo">
-                <img src="../images/final-prototype-10.png" alt="Final prototype" class="final-prototype-photo">
+                <img src="../images/final-prototype-1.webp" alt="Final prototype" class="final-prototype-photo" loading="lazy">
+                <img src="../images/final-prototype-2.webp" alt="Final prototype" class="final-prototype-photo" loading="lazy">
+                <img src="../images/final-prototype-3.webp" alt="Final prototype" class="final-prototype-photo" loading="lazy">
+                <img src="../images/final-prototype-4.webp" alt="Final prototype" class="final-prototype-photo" loading="lazy">
+                <img src="../images/final-prototype-5.webp" alt="Final prototype" class="final-prototype-photo" loading="lazy">
+                <img src="../images/final-prototype-6.webp" alt="Final prototype" class="final-prototype-photo" loading="lazy">
+                <img src="../images/final-prototype-7.webp" alt="Final prototype" class="final-prototype-photo" loading="lazy">
+                <img src="../images/final-prototype-8.webp" alt="Final prototype" class="final-prototype-photo" loading="lazy">
+                <img src="../images/final-prototype-9.webp" alt="Final prototype" class="final-prototype-photo" loading="lazy">
+                <img src="../images/final-prototype-10.webp" alt="Final prototype" class="final-prototype-photo" loading="lazy">
               </section>
               <button type="button" class="prototype-prev-image">«</button>
               <button type="button" class="prototype-next-image">»</button>
