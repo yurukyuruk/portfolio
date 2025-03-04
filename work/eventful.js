@@ -3,14 +3,14 @@ const INSERT_PREV_IMAGE_DELAY = 5;
 
 
 
+// Wait until DOM and images are fully loaded
 window.addEventListener("load", () => {
-  // 🟢 Ensure all images are fully loaded before calculating width
   const caruseleImagesContainer = document.querySelector('.carusele-images');
   const caruseleImages = Array.from(document.querySelectorAll('.carusele-image'));
   const prevImgBtn = document.querySelector('.carusele-prev-image');
   const nextImgBtn = document.querySelector('.carusele-next-image');
 
-  // ✅ Ensure images are fully loaded before getting width
+  // ✅ More reliable width calculation
   let singleImgWidth = caruseleImages[0].getBoundingClientRect().width;
   let gapSizeBetweenImagesNum = parseInt(getComputedStyle(caruseleImagesContainer).getPropertyValue('gap')) || 0;
   let imagesCount = caruseleImages.length;
@@ -24,12 +24,11 @@ window.addEventListener("load", () => {
 
     caruseleImagesContainer.insertBefore(caruseleImages[currentImgIdx], caruseleImagesContainer.firstChild);
 
-    // 🟢 Prevent "jumping" issue by disabling transition first
+    // 🟢 Prevent initial jump by ensuring transition is properly applied
     caruseleImagesContainer.style.transition = "none";
     caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`;
 
     setTimeout(() => {
-      // 🟢 Enable transition smoothly
       caruseleImagesContainer.style.transition = "transform 0.5s ease-in-out";
       caruseleImagesContainer.style.transform = "translateX(0)";
     }, 10);
@@ -45,6 +44,7 @@ window.addEventListener("load", () => {
     prevImgIdx = currentImgIdx;
     currentImgIdx = (currentImgIdx + 1) % imagesCount;
 
+    // ✅ Use a more reliable width calculation
     caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`;
 
     setTimeout(() => {
@@ -60,6 +60,7 @@ window.addEventListener("load", () => {
     }, 600);
   });
 });
+
 
 
 
