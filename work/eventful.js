@@ -43,15 +43,27 @@ nextImgBtn.addEventListener("click", () => {
   caruseleImagesContainer.classList.add("sliding-transition");
   prevImgIdx = currentImgIdx;
   currentImgIdx = (currentImgIdx + 1) % imagesCount;
+
+  // 🟢 Apply transform to slide left **before moving the element**
   caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`;
 
   setTimeout(() => {
+    // 🟢 Move the first image to the end after the transition completes
     caruseleImagesContainer.appendChild(caruseleImages[prevImgIdx]);
-    caruseleImagesContainer.classList.remove("sliding-transition");
-    caruseleImagesContainer.style.transform = "";
+
+    // 🟢 Reset the transform to prevent a visual jump
+    caruseleImagesContainer.style.transition = "none"; // ✅ Temporarily disable transition
+    caruseleImagesContainer.style.transform = "translateX(0)"; // ✅ Reset position
+
+    // 🟢 Restore transition after a short delay for smooth animation
+    setTimeout(() => {
+      caruseleImagesContainer.style.transition = "transform 0.5s ease-in-out"; // ✅ Re-enable transition
+    }, 10);
+
     nextImgBtn.disabled = false;
   }, ANIMATION_TIME);
 });
+
 
 
 
