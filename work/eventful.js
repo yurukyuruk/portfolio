@@ -1,70 +1,53 @@
 const ANIMATION_TIME = 600;
 const INSERT_PREV_IMAGE_DELAY = 5;
 
+const caruseleImagesContainer = document.querySelector('.carusele-images');
+const caruseleImages = Array.from(document.querySelectorAll('.carusele-image'))
+const prevImgBtn = document.querySelector('.carusele-prev-image');
+const nextImgBtn = document.querySelector('.carusele-next-image');
 
+// Gap between elemnts need to be defined in PX
+const gapSizeBetweenImagesPX = getComputedStyle(caruseleImagesContainer).getPropertyValue('gap');
+const gapSizeBetweenImagesNum = Number(gapSizeBetweenImagesPX.slice(0, gapSizeBetweenImagesPX.length - 2));
+const imagesCount = caruseleImages.length;
+const singleImgWidth = caruseleImages[0].width;
+let currentImgIdx = 0;
+let prevImgIdx = 0;
 
-// Wait until DOM and images are fully loaded
-window.addEventListener("load", () => {
-  const caruseleImagesContainer = document.querySelector('.carusele-images');
-  const caruseleImages = Array.from(document.querySelectorAll('.carusele-image'));
-  const prevImgBtn = document.querySelector('.carusele-prev-image');
-  const nextImgBtn = document.querySelector('.carusele-next-image');
+prevImgBtn.addEventListener("click", () => {
+  prevImgBtn.disabled = true;
+  prevImgIdx = currentImgIdx;
+  currentImgIdx = (currentImgIdx - 1 + imagesCount) % imagesCount;
+  caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth}px)`;
+  caruseleImagesContainer.insertBefore(caruseleImages[currentImgIdx], caruseleImagesContainer.firstChild);
 
-  // ✅ More reliable width calculation
-  let singleImgWidth = caruseleImages[0].getBoundingClientRect().width;
-  let gapSizeBetweenImagesNum = parseInt(getComputedStyle(caruseleImagesContainer).getPropertyValue('gap')) || 0;
-  let imagesCount = caruseleImages.length;
-  let currentImgIdx = 0;
-  let prevImgIdx = 0;
-
-  prevImgBtn.addEventListener("click", () => {
-    prevImgBtn.disabled = true;
-    prevImgIdx = currentImgIdx;
-    currentImgIdx = (currentImgIdx - 1 + imagesCount) % imagesCount;
-
-    caruseleImagesContainer.insertBefore(caruseleImages[currentImgIdx], caruseleImagesContainer.firstChild);
-
-    // 🟢 Prevent initial jump by ensuring transition is properly applied
-    caruseleImagesContainer.style.transition = "none";
-    caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`;
-
-    setTimeout(() => {
-      caruseleImagesContainer.style.transition = "transform 0.5s ease-in-out";
-      caruseleImagesContainer.style.transform = "translateX(0)";
-    }, 10);
-
-    setTimeout(() => {
-      prevImgBtn.disabled = false;
-    }, 600);
-  });
-
-  nextImgBtn.addEventListener("click", () => {
-    nextImgBtn.disabled = true;
+  // This setTimeout is required as we need to wait once elemnt will be mounted in DOM
+  // To do not experience flashing images
+  setTimeout(() => {
+    caruseleImagesContainer.style.transform = "";
     caruseleImagesContainer.classList.add("sliding-transition");
-    prevImgIdx = currentImgIdx;
-    currentImgIdx = (currentImgIdx + 1) % imagesCount;
+  }, INSERT_PREV_IMAGE_DELAY);
 
-    // ✅ Use a more reliable width calculation
-    caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`;
-
-    setTimeout(() => {
-      caruseleImagesContainer.appendChild(caruseleImages[prevImgIdx]);
-      caruseleImagesContainer.style.transition = "none";
-      caruseleImagesContainer.style.transform = "translateX(0)";
-
-      setTimeout(() => {
-        caruseleImagesContainer.style.transition = "transform 0.5s ease-in-out";
-      }, 10);
-
-      nextImgBtn.disabled = false;
-    }, 600);
-  });
+  setTimeout(() => {
+    caruseleImagesContainer.classList.remove("sliding-transition");
+    prevImgBtn.disabled = false;
+  }, ANIMATION_TIME - INSERT_PREV_IMAGE_DELAY);
 });
 
+nextImgBtn.addEventListener("click", () => {
+  nextImgBtn.disabled = true;
+  caruseleImagesContainer.classList.add("sliding-transition");
+  prevImgIdx = currentImgIdx;
+  currentImgIdx = (currentImgIdx + 1) % imagesCount;
+  caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`;
 
-
-
-
+  setTimeout(() => {
+    caruseleImagesContainer.appendChild(caruseleImages[prevImgIdx]);
+    caruseleImagesContainer.classList.remove("sliding-transition");
+    caruseleImagesContainer.style.transform = "";
+    nextImgBtn.disabled = false;
+  }, ANIMATION_TIME);
+});
 
 const finalPrototypeImagesContainer = document.querySelector('.final-prototype-photos');
 const finalPrototypeImages = Array.from(document.querySelectorAll('.final-prototype-photo'));
@@ -113,8 +96,6 @@ nextImageButton.addEventListener("click", () => {
   }, ANIMATION_TIME);
 });
 
-
-
 function toggleId() {
   const element = document.querySelector("body");
   if (element.hasAttribute("id")) {
@@ -148,4 +129,4 @@ let header = document.querySelector("header");
             header.classList.remove("header-hidden");
         }
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-  }, false); 
+  }, false);
