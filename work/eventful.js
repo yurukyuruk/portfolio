@@ -18,21 +18,25 @@ prevImgBtn.addEventListener("click", () => {
   prevImgBtn.disabled = true;
   prevImgIdx = currentImgIdx;
   currentImgIdx = (currentImgIdx - 1 + imagesCount) % imagesCount;
-  caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth}px)`;
+
+  // 🟢 Move the previous image to the beginning **before** applying the transform
   caruseleImagesContainer.insertBefore(caruseleImages[currentImgIdx], caruseleImagesContainer.firstChild);
+  
+  // 🟢 Disable transition temporarily and apply an initial negative transform
+  caruseleImagesContainer.style.transition = "none"; // ✅ Prevent instant jump
+  caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`; // ✅ Offset added
 
-  // This setTimeout is required as we need to wait once elemnt will be mounted in DOM
-  // To do not experience flashing images
+  // 🟢 Allow browser to register the change, then enable smooth transition
   setTimeout(() => {
-    caruseleImagesContainer.style.transform = "";
-    caruseleImagesContainer.classList.add("sliding-transition");
-  }, INSERT_PREV_IMAGE_DELAY);
+    caruseleImagesContainer.style.transition = "transform 0.5s ease-in-out"; // ✅ Re-enable transition smoothly
+    caruseleImagesContainer.style.transform = "translateX(0)"; // ✅ Animate back to position
+  }, 10); // ✅ Small delay added to avoid instant jump
 
   setTimeout(() => {
-    caruseleImagesContainer.classList.remove("sliding-transition");
     prevImgBtn.disabled = false;
-  }, ANIMATION_TIME - INSERT_PREV_IMAGE_DELAY);
+  }, ANIMATION_TIME);
 });
+
 
 nextImgBtn.addEventListener("click", () => {
   nextImgBtn.disabled = true;
