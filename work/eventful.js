@@ -1,70 +1,65 @@
 const ANIMATION_TIME = 600;
 const INSERT_PREV_IMAGE_DELAY = 5;
 
-const caruseleImagesContainer = document.querySelector('.carusele-images');
-const caruseleImages = Array.from(document.querySelectorAll('.carusele-image'))
-const prevImgBtn = document.querySelector('.carusele-prev-image');
-const nextImgBtn = document.querySelector('.carusele-next-image');
-
-// Gap between elemnts need to be defined in PX
-const gapSizeBetweenImagesPX = getComputedStyle(caruseleImagesContainer).getPropertyValue('gap');
-const gapSizeBetweenImagesNum = Number(gapSizeBetweenImagesPX.slice(0, gapSizeBetweenImagesPX.length - 2));
-const imagesCount = caruseleImages.length;
-const singleImgWidth = caruseleImages[0].width;
-let currentImgIdx = 0;
-let prevImgIdx = 0;
-
-prevImgBtn.addEventListener("click", () => {
-  prevImgBtn.disabled = true;
-  prevImgIdx = currentImgIdx;
-  currentImgIdx = (currentImgIdx - 1 + imagesCount) % imagesCount;
-
-  // 🟢 Move the previous image to the beginning **before** applying the transform
-  caruseleImagesContainer.insertBefore(caruseleImages[currentImgIdx], caruseleImagesContainer.firstChild);
-  
-  // 🟢 Disable transition temporarily and apply an initial negative transform
-  caruseleImagesContainer.style.transition = "none"; // ✅ Prevent instant jump
-  caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`; // ✅ Offset added
-
-  // 🟢 Allow browser to register the change, then enable smooth transition
-  setTimeout(() => {
-    caruseleImagesContainer.style.transition = "transform 0.5s ease-in-out"; // ✅ Re-enable transition smoothly
-    caruseleImagesContainer.style.transform = "translateX(0)"; // ✅ Animate back to position
-  }, 10); // ✅ Small delay added to avoid instant jump
-
-  setTimeout(() => {
-    prevImgBtn.disabled = false;
-  }, ANIMATION_TIME);
-});
 
 
-nextImgBtn.addEventListener("click", () => {
-  nextImgBtn.disabled = true;
-  caruseleImagesContainer.classList.add("sliding-transition");
-  prevImgIdx = currentImgIdx;
-  currentImgIdx = (currentImgIdx + 1) % imagesCount;
+window.addEventListener("load", () => {
+  // 🟢 Ensure all images are fully loaded before calculating width
+  const caruseleImagesContainer = document.querySelector('.carusele-images');
+  const caruseleImages = Array.from(document.querySelectorAll('.carusele-image'));
+  const prevImgBtn = document.querySelector('.carusele-prev-image');
+  const nextImgBtn = document.querySelector('.carusele-next-image');
 
-  // 🟢 Apply transform to slide left **before moving the element**
-  caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`;
+  // ✅ Ensure images are fully loaded before getting width
+  let singleImgWidth = caruseleImages[0].getBoundingClientRect().width;
+  let gapSizeBetweenImagesNum = parseInt(getComputedStyle(caruseleImagesContainer).getPropertyValue('gap')) || 0;
+  let imagesCount = caruseleImages.length;
+  let currentImgIdx = 0;
+  let prevImgIdx = 0;
 
-  setTimeout(() => {
-    // 🟢 Move the first image to the end after the transition completes
-    caruseleImagesContainer.appendChild(caruseleImages[prevImgIdx]);
+  prevImgBtn.addEventListener("click", () => {
+    prevImgBtn.disabled = true;
+    prevImgIdx = currentImgIdx;
+    currentImgIdx = (currentImgIdx - 1 + imagesCount) % imagesCount;
 
-    // 🟢 Reset the transform to prevent a visual jump
-    caruseleImagesContainer.style.transition = "none"; // ✅ Temporarily disable transition
-    caruseleImagesContainer.style.transform = "translateX(0)"; // ✅ Reset position
+    caruseleImagesContainer.insertBefore(caruseleImages[currentImgIdx], caruseleImagesContainer.firstChild);
 
-    // 🟢 Restore transition after a short delay for smooth animation
+    // 🟢 Prevent "jumping" issue by disabling transition first
+    caruseleImagesContainer.style.transition = "none";
+    caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`;
+
     setTimeout(() => {
-      caruseleImagesContainer.style.transition = "transform 0.5s ease-in-out"; // ✅ Re-enable transition
+      // 🟢 Enable transition smoothly
+      caruseleImagesContainer.style.transition = "transform 0.5s ease-in-out";
+      caruseleImagesContainer.style.transform = "translateX(0)";
     }, 10);
 
-    nextImgBtn.disabled = false;
-  }, ANIMATION_TIME);
+    setTimeout(() => {
+      prevImgBtn.disabled = false;
+    }, 600);
+  });
+
+  nextImgBtn.addEventListener("click", () => {
+    nextImgBtn.disabled = true;
+    caruseleImagesContainer.classList.add("sliding-transition");
+    prevImgIdx = currentImgIdx;
+    currentImgIdx = (currentImgIdx + 1) % imagesCount;
+
+    caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`;
+
+    setTimeout(() => {
+      caruseleImagesContainer.appendChild(caruseleImages[prevImgIdx]);
+      caruseleImagesContainer.style.transition = "none";
+      caruseleImagesContainer.style.transform = "translateX(0)";
+
+      setTimeout(() => {
+        caruseleImagesContainer.style.transition = "transform 0.5s ease-in-out";
+      }, 10);
+
+      nextImgBtn.disabled = false;
+    }, 600);
+  });
 });
-
-
 
 
 
