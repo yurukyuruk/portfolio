@@ -10,11 +10,12 @@ const nextImgBtn = document.querySelector('.carusele-next-image');
 const gapSizeBetweenImagesPX = getComputedStyle(caruseleImagesContainer).getPropertyValue('gap');
 const gapSizeBetweenImagesNum = Number(gapSizeBetweenImagesPX.slice(0, gapSizeBetweenImagesPX.length - 2));
 const imagesCount = caruseleImages.length;
-const singleImgWidth = caruseleImages[0].width;
+//const singleImgWidth = caruseleImages[0].width;
 let currentImgIdx = 0;
 let prevImgIdx = 0;
 
 prevImgBtn.addEventListener("click", () => {
+  const singleImgWidth = caruseleImages[0].width;
   prevImgBtn.disabled = true;
   prevImgIdx = currentImgIdx;
   currentImgIdx = (currentImgIdx - 1 + imagesCount) % imagesCount;
@@ -35,6 +36,7 @@ prevImgBtn.addEventListener("click", () => {
 });
 
 nextImgBtn.addEventListener("click", () => {
+  const singleImgWidth = caruseleImages[0].width;
   nextImgBtn.disabled = true;
   caruseleImagesContainer.classList.add("sliding-transition");
   prevImgIdx = currentImgIdx;
@@ -58,11 +60,11 @@ const nextImageButton = document.querySelector('.prototype-next-image');
 const gapSizeBetweenImagesPixel = getComputedStyle(finalPrototypeImagesContainer).getPropertyValue('gap');
 const gapSizeBetweenImagesNumber = Number(gapSizeBetweenImagesPixel.slice(0, gapSizeBetweenImagesPixel.length - 2));
 const imageCount = finalPrototypeImages.length;
-const singleImageWidth = finalPrototypeImages[0].width;
 let currentImgIndex = 0;
 let prevImageIndex = 0;
 
 prevImageButton.addEventListener("click", () => {
+  const singleImageWidth = finalPrototypeImages[0].width;
   prevImageButton.disabled = true;
   prevImageIndex = currentImgIndex;
   currentImgIndex = (currentImgIndex - 1 + imageCount) % imageCount;
@@ -82,6 +84,7 @@ prevImageButton.addEventListener("click", () => {
 });
 
 nextImageButton.addEventListener("click", () => {
+  const singleImageWidth = finalPrototypeImages[0].width;
   nextImageButton.disabled = true;
   finalPrototypeImagesContainer.classList.add("sliding-transition");
   prevImageIndex = currentImgIndex;
