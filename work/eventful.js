@@ -1,25 +1,39 @@
 const ANIMATION_TIME = 600;
 const INSERT_PREV_IMAGE_DELAY = 5;
 
+function getGapSize(element) {
+  const computedStyle = window.getComputedStyle(element);
+  const gapValue = computedStyle.getPropertyValue('gap'); // Get gap value (e.g., "20px", "2em")
+  
+  const match = gapValue.match(/^([\d.]+)([a-z%]*)$/i); // Extract number and unit
+
+  if (match) {
+      return {
+          numericValue: parseFloat(match[1]), // Convert to number
+          unit: match[2] || '' // Get unit (default to empty string if none)
+      };
+  }
+
+  return null; // Return null if not found
+}
+
 const caruseleImagesContainer = document.querySelector('.carusele-images');
 const caruseleImages = Array.from(document.querySelectorAll('.carusele-image'))
 const prevImgBtn = document.querySelector('.carusele-prev-image');
 const nextImgBtn = document.querySelector('.carusele-next-image');
 
-// Gap between elemnts need to be defined in PX
-const gapSizeBetweenImagesPX = getComputedStyle(caruseleImagesContainer).getPropertyValue('gap');
-const gapSizeBetweenImagesNum = Number(gapSizeBetweenImagesPX.slice(0, gapSizeBetweenImagesPX.length - 2));
 const imagesCount = caruseleImages.length;
 //const singleImgWidth = caruseleImages[0].width;
 let currentImgIdx = 0;
 let prevImgIdx = 0;
 
 prevImgBtn.addEventListener("click", () => {
+  const gapSize = getGapSize(finalPrototypeImagesContainer);
   const singleImgWidth = caruseleImages[0].width;
   prevImgBtn.disabled = true;
   prevImgIdx = currentImgIdx;
   currentImgIdx = (currentImgIdx - 1 + imagesCount) % imagesCount;
-  caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth}px)`;
+  caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSize.numericValue}px)`;
   caruseleImagesContainer.insertBefore(caruseleImages[currentImgIdx], caruseleImagesContainer.firstChild);
 
   // This setTimeout is required as we need to wait once elemnt will be mounted in DOM
@@ -36,12 +50,13 @@ prevImgBtn.addEventListener("click", () => {
 });
 
 nextImgBtn.addEventListener("click", () => {
+  const gapSize = getGapSize(finalPrototypeImagesContainer);
   const singleImgWidth = caruseleImages[0].width;
   nextImgBtn.disabled = true;
   caruseleImagesContainer.classList.add("sliding-transition");
   prevImgIdx = currentImgIdx;
   currentImgIdx = (currentImgIdx + 1) % imagesCount;
-  caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSizeBetweenImagesNum}px)`;
+  caruseleImagesContainer.style.transform = `translateX(-${singleImgWidth + gapSize.numericValue}px)`;
 
   setTimeout(() => {
     caruseleImagesContainer.appendChild(caruseleImages[prevImgIdx]);
@@ -56,19 +71,17 @@ const finalPrototypeImages = Array.from(document.querySelectorAll('.final-protot
 const prevImageButton = document.querySelector('.prototype-prev-image');
 const nextImageButton = document.querySelector('.prototype-next-image');
 
-// Gap between elements needs to be defined in PX
-const gapSizeBetweenImagesPixel = getComputedStyle(finalPrototypeImagesContainer).getPropertyValue('gap');
-const gapSizeBetweenImagesNumber = Number(gapSizeBetweenImagesPixel.slice(0, gapSizeBetweenImagesPixel.length - 2));
 const imageCount = finalPrototypeImages.length;
 let currentImgIndex = 0;
 let prevImageIndex = 0;
 
 prevImageButton.addEventListener("click", () => {
   const singleImageWidth = finalPrototypeImages[0].width;
+  const gapSize = getGapSize(finalPrototypeImagesContainer);
   prevImageButton.disabled = true;
   prevImageIndex = currentImgIndex;
   currentImgIndex = (currentImgIndex - 1 + imageCount) % imageCount;
-  finalPrototypeImagesContainer.style.transform = `translateX(-${singleImageWidth}px)`;
+  finalPrototypeImagesContainer.style.transform = `translateX(-${singleImageWidth + gapSize.numericValue}px)`;
   finalPrototypeImagesContainer.insertBefore(finalPrototypeImages[currentImgIndex], finalPrototypeImagesContainer.firstChild);
 
   // Wait for the element to mount in the DOM to avoid flashing images
@@ -84,12 +97,13 @@ prevImageButton.addEventListener("click", () => {
 });
 
 nextImageButton.addEventListener("click", () => {
+  const gapSize = getGapSize(finalPrototypeImagesContainer);
   const singleImageWidth = finalPrototypeImages[0].width;
   nextImageButton.disabled = true;
   finalPrototypeImagesContainer.classList.add("sliding-transition");
   prevImageIndex = currentImgIndex;
   currentImgIndex = (currentImgIndex + 1) % imageCount;
-  finalPrototypeImagesContainer.style.transform = `translateX(-${singleImageWidth + gapSizeBetweenImagesNumber}px)`;
+  finalPrototypeImagesContainer.style.transform = `translateX(-${singleImageWidth + gapSize.numericValue}px)`;
 
   setTimeout(() => {
     finalPrototypeImagesContainer.appendChild(finalPrototypeImages[prevImageIndex]);
