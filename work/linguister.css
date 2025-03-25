@@ -783,8 +783,11 @@ footer {
         padding-right: 20px;
         padding-left: 20px;
     }
-    .personas div, .personas div h3 {
-        padding: 0 0 40px 0;
+    .personas h3 {
+        padding: 60px 0 20px 0;
+    }
+    .personas div {
+        padding: 0;
     }
     .brainstorming-map-photo-section img {
         padding-right: 20px;
