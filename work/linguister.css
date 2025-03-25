@@ -67,13 +67,13 @@ header {
     width: 280px;
     margin-right: -10px;
 }
-.eventful-logo-and-description {
+.linguister-logo-and-description {
     width: 50vw;
 }
-.eventful-logo-and-description img{
+.linguister-logo-and-description img{
     width: 200px;
 }
-.eventful-logo-and-description h1{
+.linguister-logo-and-description h1{
     font-size: 24px;
     font-weight: 500;
     padding-top: 60px;
@@ -89,12 +89,12 @@ header {
     cursor: pointer;
     margin-top: 40px;
     background-color: white;
-    color: rgb(255, 94, 58);
-    border: 2px solid rgb(255, 94, 58);
+    color: rgb(78, 0, 134);
+    border: 2px solid rgb(78, 0, 134);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .prototype-button:hover {
-    background-color: rgb(255, 94, 58);
+    background-color: rgb(78, 0, 134);
     color: white;
 }
 .work-details {
@@ -113,7 +113,7 @@ header {
 }
 .work-details li::before {
     content: "•"; 
-    color: rgb(255, 94, 58);
+    color: rgb(255, 173, 0);
     display: inline-block;
     width: 16px;
 }
@@ -156,7 +156,7 @@ header {
 }
 .carusele-images-container {
     position: relative;
-    height: 600px;
+    height: 540px;
     display: flex;
     margin-top: 200px;
     margin-bottom: 200px;
@@ -198,27 +198,40 @@ header {
 .carusele-images.sliding-transition {
     transition: transform 0.5s ease-in-out;
 }
-
 .research-section  {
     padding: 0 100px 0 100px;
 }
 .research-section h2 {
     font-size: 34px;
 }
-.research-section p {
-    font-size: 20px;
-    line-height: 1.6;
-    padding-top: 20px;
-}
 .research-section h2 + p {
     padding-top: 40px;
 }
+.research-section p, .research-section ul li h3 {
+    font-size: 20px;
+    line-height: 1.6;
+}
+.research-section-second-paragraph, .research-section ul li {
+    padding-top: 20px;
+}
 .diamond-bullet {
-    color: rgb(255, 94, 58);
+    color: rgb(70,201, 0);
     font-size: 22px;
 }
 .research-section p span {
     font-weight: bold;
+}
+.brainstorming-map-photo-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+.brainstorming-map-photo-section img {
+    max-width: 1200px;
+    width: calc(100vw - 200px);
+}
+.research-section-last-paragraph {
+    padding-top: 60px;
 }
 .ideation-section h2 {
     padding: 150px 100px 0 100px;
@@ -226,128 +239,138 @@ header {
     font-weight: bold;
     list-style:disc;
 }
-.personas {
-    padding: 40px 100px 0 100px;
-}
 .personas h3 {
-    font-size: 22px;
+    padding: 60px 100px 20px 100px;
+    font-size: 26px;
 }
 .personas div {
-    padding-top: 20px;
+    padding: 0 100px 40px 100px;
 }
 .personas div img {
-    width: calc(50vw - 140px);
+    width: calc(50vw - 180px);
     padding-top: 40px;
 }
 .first-persona {
-    padding: 20px 50px 0px 0px;
+    padding: 20px 60px 0px 0px;
 }
-.site-map-section {
-    padding: 150px 100px 0 100px;
+.second-persona {
+    padding-left: 60px;
 }
-.site-map-section h3 {
+.user-scenarios {
+    padding: 100px 100px 0 100px;
+}
+.user-scenarios h3 {
+    font-size: 26px;
+    padding-bottom: 54px;
+}
+.user-scenarios ul {
+    display: flex;
+}
+.user-scenario-icon {
+    width: 36px;
+    height: 36px;  
+}
+.user-scenario-1 {
+    padding-right: 60px;
+}
+.user-scenario-2 {
+    padding-left: 60px;
+}
+.user-scenario-1 h4, .user-scenario-2 h4 {
     font-size: 22px;
+    border-bottom: solid 1px rgb(0, 0, 0);
+    margin-bottom: 12px;
 }
-.site-map-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.site-map-content img {
-    width: 800px;
-    padding-top: 100px;
-}
-.site-map-texts ol {
-    padding: 20px 0 0 0;
-}
-.site-map-texts ol li {
-    counter-increment: li;
-    display: flex;              
-    align-items: flex-start;     
-    margin-bottom: 20px;
-    padding-top: 14px;
-}
-.site-map-texts ol {
-    list-style: none; 
-    counter-reset: li
-}
-.site-map-texts ol > li::before {
-    content: counter(li);
-    font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 94, 58);
-    color: white;
-    font-weight: bold;
-    padding: 8px 16px 8px 16px;
-    border-radius: 26px;
-    margin-right: 10px; 
-}
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-.content-wrapper h4 {
-    font-size: 20px;
-    display: flex;
-    align-items: center;         /* Center-align the number and h4 */
-    margin: 0;
-    font-size: 20px;
-    padding: 10px 0 0 8px;
-}
-#site-map-first-paragraph, #site-map-last-paragraph {
-    padding-top: 40px;
-    margin-left: 0;
-    font-size: 20px;
-}
-.site-map-texts p {
-    margin-left: -56px;           
-    font-size: 18px;
-    line-height: 1.6;
+.user-scenario-actor-section {
     padding-top: 20px;
 }
-.user-flow-section {
-    padding: 150px 100px 0 100px;
+.user-scenario-actor-section img {
+    padding-bottom: 6px;
 }
-.user-flow-section img{
-    padding-top: 100px;
-    width: 800px;
-}
-.user-flow-section h3 {
-    font-size: 22px;
-}
-.user-flow-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.user-flow-text-content {
-    padding-top: 40px;
+.user-scenario-1 div p, .user-scenario-2 div p {
+    padding: 6px 0 32px 0;
     font-size: 20px;
-    line-height: 1.6;
 }
-.user-flow-text-content p span {
-    font-weight: bold;
-}
-.user-flow-text-content-second-paragraph, .user-flow-text-content-third-paragraph {
-    padding-top: 18px;
-}
-.information-architecture-section {
-    padding-top: 100px;
+.user-scenario-1 div div, .user-scenario-2 div div {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
 }
-.information-architecture-section h3 {
+.user-scenario-1 div h5, .user-scenario-2 div h5 {
     font-size: 22px;
+    margin: 9px 0 0 0;
+    padding-right: 8px;
 }
-.information-architecture-section img {
-    padding-top: 60px;
-    width: calc(100vw - 230px);
+.user-scenario-actions-list {
+    flex-direction: column;
+}
+.user-scenario-actions-header-section {
+    padding-bottom: 6px;
+}
+.user-scenario-actions-list li {
+    padding-left: 6px;  
+    font-size: 20px;
+}
+.user-scenario-actions-list li span{
+    padding-right: 10px;
+}
+.user-scenario-task-completion-header-section {
+    padding: 16px 0 0 0;
+}
+.user-story-maps {
+    padding: 100px 100px 0 100px;
+}
+.user-story-maps h4 {
+    font-size: 26px;
+    padding-bottom: 68px;
+}
+.user-story-maps div {
+    display: flex;
+}
+.user-story-maps div img {
+    width: calc(50vw - 150px);
+}
+.first-user-story-map {
+    padding-right: 100px;
+}
+.user-stories {
+    padding: 100px 100px 0 100px;
+}
+.user-stories h3 {
+    font-size: 26px;
+    padding-bottom: 54px;
+}
+.user-stories div {
+    display: flex;
+}
+.user-story-1 {
+    flex-direction: column;
+    width: 50%;
+    padding-right: 60px;
+}
+.user-story-2 {
+    flex-direction: column;
+    width: 50%;
+    padding-left: 60px;
+}
+.user-story-1 h4, .user-story-2 h4 {
+    font-size: 22px;
+    border-bottom: solid 1px rgb(0, 0, 0);
+    margin-bottom: 32px;
+}
+.user-story-1 ul li, .user-story-2 ul li {
+    font-size: 20px;
+    padding-bottom: 12px;
+}
+.user-story-1 ul li span, .user-story-2 ul li span {
+    padding-right: 10px;
+}
+.bold {
+    font-weight: bold;
 }
 .low-fidelity-wireframe-section h3 {
     padding: 150px 100px 0 100px;
-    font-size: 22px;
+    font-size: 26px;
 }
 .wireframe-images-container {
     margin-top: 54px;
@@ -455,14 +478,14 @@ header {
     border-radius: 50px;
     cursor: pointer;
     border: none;
-    border: 2px solid rgb(53, 127, 165);
+    border: 2px solid rgb(78, 0, 134);
     background-color: white;
-    color: rgb(53, 127, 165);
+    color: rgb(78, 0, 134);
     transition:  background-color 0.3s ease, color 0.3s ease;
     align-self: center;
 }
 .prototype-content a button:hover {
-    background-color: rgb(53, 127, 165);
+    background-color: rgb(78, 0, 134);
     color: white;
 }
 .usability-testing-section h3 {
@@ -501,7 +524,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(53, 127, 165);
+    background-color: rgb(78, 0, 134);
     color: white;
     font-weight: bold;
     padding: 8px 16px 8px 16px;
@@ -539,14 +562,14 @@ header {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     position: relative;
 }
-.blue-user-pain-point {
-    background-color: #357fa529;
-}
-.yellow-user-pain-point {
-    background-color: rgb(245, 245, 220);
+.purple-user-pain-point {
+    background-color: rgba(78, 0, 134, 0.38);
 }
 .orange-user-pain-point {
-    background-color: rgba(255, 88, 51, 0.297);
+    background-color: rgba(255, 174, 0, 0.5);
+}
+.green-user-pain-point {
+    background-color: rgba(70, 201, 0, 0.42);
 }
 .user-pain-points-list li h5 {
     font-size: 20px;
@@ -578,7 +601,7 @@ header {
     padding-top: 20px;
 }
 .iteration-list-symbol {
-    color: rgb(255, 94, 58);
+    color: rgb(255, 87, 51);
     font-size: 24px;
 }
 .things-changed {
@@ -605,7 +628,7 @@ header {
 }
 .final-prototype-photo {
     object-fit: contain;
-    width: 240px;
+    width: 310px;
 }
 .prototype-prev-image  {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -660,12 +683,12 @@ footer {
 }
 
 @media (max-width: 976px) {
-    .eventful-logo-and-description {
+    .linguister-logo-and-description {
         width: 100%;
         display: flex;
         flex-direction: column;
     }
-    .eventful-logo-and-description a {
+    .linguister-logo-and-description a {
         align-self: center;
     }
     .main-image-section {
@@ -675,7 +698,7 @@ footer {
     .main-image-section img {
         margin-right: 20px;
     }
-    .eventful-main-image{
+    .linguister-main-image{
         align-self: center;
         padding-top: 100px;
     }
@@ -694,17 +717,32 @@ footer {
     }
     .personas div img {
         width: 100%;
+        padding: 0;
     }
     .first-persona {
-        padding-right: 0;
+        margin-bottom: 40px;
     }
-    .site-map-content img {
-        width: 100%;
-        padding: 100px 100px 0 100px;
+    .user-story-maps div {
+        flex-direction: column;
     }
-    .user-flow-section img {
+    .user-story-maps div img {
         width: 100%;
-        padding: 100px 100px 0 100px;
+    }
+    .first-user-story-map {
+        margin-bottom: 40px;
+    }
+    .user-scenarios ul, .user-stories div {
+        flex-direction: column;
+    }
+    .user-scenario-1, .user-scenario-2 {
+        padding: 0;
+    }
+    .user-story-1, .user-story-2 {
+        width: 100%;
+        padding: 0;
+    }
+    .user-scenario-1, .user-story-1 {
+        margin-bottom: 40px;
     }
     .style-guide-content {
         flex-direction: column;
@@ -735,8 +773,8 @@ footer {
         width: 100%;
     }
     .main-image-section, .overview-wrapper, .problem-and-solution, 
-    .research-section, .ideation-section h2, .personas, .site-map-section,
-    .user-flow-section, .low-fidelity-wireframe-section h3, .wireframe-images-container, .design-section h2, 
+    .research-section, .ideation-section h2, .personas, .user-scenarios,
+    .user-stories, .user-story-maps, .low-fidelity-wireframe-section h3, .wireframe-images-container, .design-section h2, 
     .style-guide-section, .ui-design-section ul, .ui-design-section h3, .ui-design-section p,
     .testing-section h2, .prototype-content, .usability-testing-section h3,
     .test-scenario, .test-scenario-description, .test-scenarios-list,
@@ -744,6 +782,14 @@ footer {
     .final-prototype-part h3, .final-prototype-part p {
         padding-right: 20px;
         padding-left: 20px;
+    }
+    .personas div, .personas div h3 {
+        padding: 0 0 40px 0;
+    }
+    .brainstorming-map-photo-section img {
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 100%;
     }
     #body-hidden {
         overflow-y: hidden;
