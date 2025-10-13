@@ -2,5 +2,8 @@
   "devDependencies": {
     "http-server": "^14.1.1",
     "terser": "^5.36.0"
+  },
+  "scripts": {
+    "dev": "http-server ."
   }
 }
