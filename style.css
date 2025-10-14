@@ -241,6 +241,9 @@ footer {
     }  
 }
 @media (max-width: 720px) {
+    button {
+        width: 240px;
+    }
     .body-hidden {
         overflow-y: hidden;
     }
@@ -406,4 +409,5 @@ footer {
         overflow-x: hidden;
         width: 100%;
     }
+    
 }
