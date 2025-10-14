@@ -244,6 +244,16 @@ footer {
     button {
         width: 240px;
     }
+    .job-title {
+        flex-direction: column;
+        align-items: center;
+    }
+    .digital-solutions-title {
+        padding-left: 0;
+    }
+    .web-development-title {
+        padding-right: 0;
+    }   
     .body-hidden {
         overflow-y: hidden;
     }
