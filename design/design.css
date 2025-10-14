@@ -65,75 +65,49 @@ header {
 main {
     flex: 1;
 }
-.about-me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.name {
-    font-size: 64px;
-    font-weight: 400;
-    padding: 186px 0 0 0;
-}
-.job-title {
-    color: rgb(145, 145, 145);
-    padding: 40px 0 0 0;
-    font-size: 28px;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.job-title div {
-    text-align: center;
-}
-.digital-solutions-title {
-    padding-left: 28px;
-}
-.web-development-title {
-    padding-right: 28px;
-}
-.job-description {
-    color: rgb(120, 120, 120);
-    padding: 50px 100px 0 100px;
-    font-size: 18px;
-    text-align: center;
-}
 .works {
-    padding: 100px 50px 0 50px;
-    display: flex;
-    justify-content: space-around;
+    padding-top: 100px;
 }
 .work {
-    width: 380px;
-    height: 380px;
-    transition: background-color 0.2s ease;
-    border-radius: 160px;
-}
-.work a p {
-    padding: 0 20px 0 20px;
-    font-size: 34px;
-    text-align: center;
-    color: black;
-}
-.work a {
-    width: 100%;
-    height: 100%;
+    padding: 50px 100px 0 100px;
     display: flex;
-    flex-direction: column;
+}
+.image-wrapper {
+    overflow: clip;
+    width: 600px;
+    height: 500px;
+}
+.image-wrapper img {
+    width: 600px;
+    height: 500px;
+    transition: transform 0.3s ease;
+}
+.image-wrapper:hover img {
+    transform: scale(1.06);
+}
+.work section {
+    margin-top: -9px;
+    height: 500px;
+    padding-left: 60px;
+}
+.work-name {
+    font-size: 32px;
+}
+.work-description {
+    padding-top: 20px;
+    font-size: 18px;
+}
+.work-details {
+    padding-top: 60px;
+}
+.work-detail {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
 }
-.design {
-    border: 20px solid rgb(254, 227, 209);
-}
-.design:hover {
- background-color: rgb(254, 227, 209);
-}
-.design:hover .ux-projects-button {
- background-color: rgb(255, 94, 58);
- color: white;
+.work-detail p {
+    font-size: 18px;
+    padding-left: 4px;
 }
 button {
     font-size: 18px;
@@ -146,52 +120,30 @@ button {
     margin-top: 34px;
     cursor: pointer;
 }
-
-.ux-projects-button {
+.work-color-1 {
+    color: rgb(255, 94, 58);
+}
+.work-color-4 {
+    color: rgb(64, 144, 117)
+}
+.event-button {
     border: 2px solid rgb(255, 94, 58);
     color: rgb(255, 94, 58);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-.code {
-    border: 20px solid rgb(210, 229, 243);
-}
-.code:hover {
-    background-color: rgb(210, 229, 243);
-}
-.code:hover .frontend-projects-button {
-    background-color: rgb(0, 107, 163);
+.event-button:hover {
+    background-color: rgb(255, 94, 58);
     color: white;
 }
-.frontend-projects-button {
-    border: 2px solid rgb(0, 107, 163);
-    color: rgb(0, 107, 163);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.data {
-    border: 20px solid rgb(209, 244, 221);
-}
-.data:hover {
-    background-color: rgb(209, 244, 221);
-}
-.data:hover .data-analysis-projects-button {
-    background-color: rgb(64, 144, 117);
-    color: white;
-}
-.data-analysis-projects-button {
+.linguister-button {
     border: 2px solid rgb(64, 144, 117);
     color: rgb(64, 144, 117);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-.work-color-1 {
-    color: rgb(255, 94, 58);
+.linguister-button:hover {
+    background-color: rgb(64, 144, 117);
+    color: white;
 }
-.work-color-2 {
-    color: rgb(0, 107, 163);
-}
-.work-color-4 {
-    color: rgb(64, 144, 117);
-}
-
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -212,34 +164,36 @@ footer {
     padding-left: 3px;
     color: black;
 }
-@media (max-width: 1440px) {
-    .works {
-        flex-wrap: wrap;
-    }
-}
+
 @media (max-width: 1200px) {
-    .job-description {
-        padding-bottom: 50px;
+    .work {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+    .image-wrapper, .image-wrapper img {
+        width: calc(100vw - 200px);
+        height: auto;
+    }
+    .work section {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0;
+    }
+    .work section a {
+        align-self: center;
+    }
+    footer {
+        margin-top: 0;
     }
     body {
         overflow-x: hidden;
         width: 100%;
     }
 }
-@media (max-width: 1000px) {
-    .works {
-        flex-direction: column;
-        align-items: center;
-        padding: 100px 0 0 0;
-    }
-    .work {
-        width: calc(100vw - 200px);
-        margin-bottom: 80px;
-    }
-    footer {
-        margin-top: 0;
-    }  
-}
+
 @media (max-width: 720px) {
     .body-hidden {
         overflow-y: hidden;
@@ -382,11 +336,29 @@ footer {
         color: black;
     }
 
-    .job-description {
-        padding: 50px 20px 20px 20px;
+    .image-wrapper {
+        display: flex;
+        justify-content: center;
+        width: calc(100vw - 40px);
     }
+
+    .image-wrapper img {
+        width: calc(100vw - 40px);
+        height: auto;
+    }
+
     .work {
-        width: calc(100vw - 100px);
+        padding: 20px;
+    }
+
+    .work section {
+        padding-left: 0;
+    }
+    .eventful-image  {
+        content: url(../images/eventful-small.webp);
+    }
+    .linguister-image {
+        content: url(../images/linguister-small.webp);
     }
     footer {
         flex-direction: column;

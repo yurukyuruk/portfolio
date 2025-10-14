@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="UX/UI design"
+    />
+    <link
+      rel="stylesheet"
+      href="./code.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    </noscript>
+
+    <title>Asli Yuruk Portfolio - Frontend Development</title>
+  </head>
+  <body>
+    <header>
+        <section class="mobile-header">
+            <div class="header-content">
+                <a href="../index.html" class="logo"><img src="../images/logo.webp" alt="logo"></a>
+                <label>
+                    <input type="checkbox" name="" class="hamburger-checkbox" aria-label="Toggle navigation menu">
+                    <div class="bar hamburger-icon">
+                        <span class="top"></span>
+                        <span class="middle"></span>
+                        <span class="bottom"></span>
+                    </div>
+                </label>
+            </div>
+            <nav>
+                <ul  class="mobile-menu-list">
+                    <li class="mobile-menu-list-item"><a href="../index.html">Home</a></li>
+                    <li class="mobile-menu-list-item"><a href="../design/design.html">Design</a></li>
+                    <li class="mobile-menu-list-item"><a href="./code.html" id="active">Code</a></li>
+                    <li class="mobile-menu-list-item"><a href="../data/data.html">Data</a></li>
+                    <li class="mobile-menu-list-item"><a href="../about.html">About</a></li>
+                    <li class="mobile-menu-list-item"><a href="https://drive.google.com/file/d/1rMLXnLGATEt0uS2-o27dQd4IWY-vawZA/view?usp=sharing" target="_blank">Resume</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="desktop-header">
+            <a href="../index.html" class="logo"><img src="../images/logo.webp" alt="logo"></a>
+            <nav>
+                <ul class="desktop-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../design/design.html">Design</a></li>
+                    <li><a href="./code.html" id="active">Code</a></li>
+                    <li><a href="../data/data.html">Data</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1rMLXnLGATEt0uS2-o27dQd4IWY-vawZA/view?usp=sharing" target="_blank">Resume</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <ul class="works">
+            <li class="work">
+                <a href="https://ms-klima-lodz.pl/" class="image-wrapper" target="_blank"><img src="../images/msinstalbud-big.webp" alt="MS Instalbud webpage design image" class="msinstalbud-image" loading="lazy"></a>
+                <section>
+                    <h2><a href="https://ms-klima-lodz.pl/" class="work-name work-color-2" target="_blank">MS INSTALBUD</a></h2>
+                    <p class="work-description">A custom website for an air conditioning client, featuring product information and services 
+                        like maintenance and cleaning.
+                    </p>
+                    <ul class="work-details">
+                        <li class="work-detail">
+                            <h3 class="work-color-2">Project type:</h3>
+                            <p>Responsive website</p>
+                        </li>
+                        <li class="work-detail">
+                            <h3 class="work-color-2">Role:</h3>
+                            <p>UX/UI designer + logo designer + web developer</p>
+                        </li>
+                    </ul>
+                    <a href="https://ms-klima-lodz.pl/" target="_blank"><button class="msinstalbud-button">View Website Template</button></a>
+                </section>
+            </li>
+            <li class="work">
+                <a href="https://southernrightacupuncture.com/index.html" class="image-wrapper" target="_blank"><img src="../images/southernrightacupuncture-big.webp" alt="Southern Right Acupuncture webpage design image" class="southernrightacupuncture-image" loading="lazy"></a>
+                <section>
+                    <h2><a href="https://southernrightacupuncture.com/index.html" class="work-name work-color-3" target="_blank">SOUTHERN RIGHT ACUPUNCTURE</a></h2>
+                    <p class="work-description">A custom website for a client offering Tai Chi and Qi Gong classes, as well as acupuncture
+                         and traditional Chinese medicine.
+                    </p>
+                    <ul class="work-details">
+                        <li class="work-detail">
+                            <h3 class="work-color-3">Project type:</h3>
+                            <p>Responsive website</p>
+                        </li>
+                        <li class="work-detail">
+                            <h3 class="work-color-3">Role:</h3>
+                            <p>UX/UI designer + logo designer + web developer</p>
+                        </li>
+                    </ul>
+                    <a href="https://southernrightacupuncture.com/index.html" target="_blank"><button class="southernrightacupuncture-button">View Website</button></a>
+                </section>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <p class="footer-designer-part">Designed by<span class="footer-my-name">Asli Yuruk</span>.</p>
+        <p>COPYRIGHT © 2024</p>
+    </footer>
+    <script
+      src="./code.js"
+    ></script>
+  </body>
+</html>
